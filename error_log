@@ -1,0 +1,397 @@
+[26-Feb-2024 00:12:22 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[26-Feb-2024 00:12:22 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[26-Feb-2024 00:12:22 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[26-Feb-2024 06:38:02 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\AuthController as AuthController because the name is already in use in /home2/eicyjdte/public_html/dev/routes/web.php on line 6
+[26-Feb-2024 09:44:33 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home2/eicyjdte/public_html/dev/app/Http/Controllers/StudentController.php on line 4
+[26-Feb-2024 09:44:42 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home2/eicyjdte/public_html/dev/app/Http/Controllers/StudentController.php on line 4
+[27-Feb-2024 01:26:31 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[27-Feb-2024 01:26:31 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[27-Feb-2024 01:26:31 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[27-Feb-2024 01:26:31 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[27-Feb-2024 01:26:31 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[27-Feb-2024 10:52:10 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Front\AdminquesController, because the name is already in use in /home2/eicyjdte/public_html/dev/app/Http/Controllers/AdminquesController.php on line 16
+[29-Feb-2024 13:05:41 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home2/eicyjdte/public_html/dev/app/Http/Controllers/StudentController.php on line 3
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Feb-2024 23:24:30 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-Mar-2024 06:45:11 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 266342400 bytes) in /home2/eicyjdte/public_html/dev/storage/framework/views/a80bda05850ea1d20265252f8e9113679638b772.php on line 46
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[07-Mar-2024 23:44:59 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 01:40:23 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 03:26:35 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[11-Mar-2024 13:02:38 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 266342400 bytes) in /home2/eicyjdte/public_html/dev/app/Http/Controllers/AdminquesController1.php on line 77
+[12-Mar-2024 09:39:22 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 266342400 bytes) in /home2/eicyjdte/public_html/dev/app/Http/Controllers/UserController.php on line 73
+[14-Mar-2024 12:59:51 UTC] PHP Fatal error:  Trait "App\Models\SoftDeletes" not found in /home2/eicyjdte/public_html/dev/app/Models/QuestionBank.php on line 7
+[16-Mar-2024 06:26:51 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 266342400 bytes) in /home2/eicyjdte/public_html/dev/storage/framework/views/bdcc971041063350248a4b8a2c2f27e87c3eaa8a.php on line 36
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[18-Mar-2024 00:26:10 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[20-Mar-2024 03:46:32 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[21-Mar-2024 00:14:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[03-Apr-2024 04:11:07 America/Chicago] PHP Warning:  Undefined array key "CKEditor" in /home2/eicyjdte/public_html/dev/upload.php on line 38
+[03-Apr-2024 04:11:07 America/Chicago] PHP Warning:  Undefined array key "CKEditorFuncNum" in /home2/eicyjdte/public_html/dev/upload.php on line 41
+[03-Apr-2024 04:11:07 America/Chicago] PHP Warning:  Undefined array key "langCode" in /home2/eicyjdte/public_html/dev/upload.php on line 44
+[03-Apr-2024 04:13:51 America/Chicago] PHP Warning:  Undefined array key "CKEditorFuncNum" in /home2/eicyjdte/public_html/dev/upload.php on line 17
+[03-Apr-2024 12:13:35 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 266342400 bytes) in /home2/eicyjdte/public_html/dev/storage/framework/views/bdcc971041063350248a4b8a2c2f27e87c3eaa8a.php on line 65
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[22-Apr-2024 07:50:46 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[29-Apr-2024 05:42:39 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[30-Apr-2024 04:31:37 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[01-May-2024 00:21:57 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[02-May-2024 04:46:21 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[06-May-2024 01:17:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:48 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:42:48 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: title
+[08-May-2024 11:43:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 11:44:04 UTC] Stripe Notice: Undefined property of Stripe\Product instance: course_id
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 06:53:42 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[08-May-2024 07:22:20 America/Chicago] PHP Warning:  Undefined variable $Ah in /home2/eicyjdte/public_html/dev/adminer-4.8.1.php on line 1787
+[09-May-2024 10:27:54 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:54 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:54 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:54 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:55 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:55 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:55 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:55 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:27:55 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:37 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:37 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:37 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:37 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:38 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:38 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:38 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:38 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:28:38 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:00 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:30:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:22 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:24 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:24 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:31:24 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:09 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:09 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:11 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:32:11 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:38:08 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:38:08 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:39:05 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:39:06 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:39:56 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:39:56 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:42:26 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:42:26 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:42:26 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:42:26 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:02 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:40 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:43:40 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:44:07 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:44:07 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:01 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:10 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:11 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:11 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:23 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:24 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 10:45:24 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: product
+[09-May-2024 11:09:19 UTC] Stripe Notice: Undefined property of Stripe\PaymentLink instance: product
+[09-May-2024 11:46:40 UTC] Stripe Notice: Undefined property of Stripe\LineItem instance: url
+[11-May-2024 10:00:07 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:00:08 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:00:09 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:03 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:04 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:05 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:17 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:18 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[11-May-2024 10:01:18 UTC] Stripe Notice: Undefined property of Stripe\PaymentIntent instance: email
+[13-May-2024 07:04:07 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:07 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:08 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:08 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:09 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:09 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:10 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:10 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:11 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:11 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:12 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:13 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:13 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:14 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:14 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:04:15 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:04:15 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:40 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:40 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:41 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:41 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:41 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:41 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:42 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:42 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:43 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:43 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:44 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:44 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:45 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:45 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:46 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:46 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[13-May-2024 07:07:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: currency
+[13-May-2024 07:07:47 UTC] Stripe Notice: Undefined property of Stripe\Product instance: recurring
+[14-May-2024 10:40:48 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:49 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:50 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:50 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:51 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:52 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:53 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:53 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:40:54 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: customer_id
+[14-May-2024 10:59:43 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:00:24 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:03:29 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:06:04 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:09:10 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:10:08 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:39:00 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:44:36 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:46:14 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:46:31 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:46:38 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:46:52 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:46:53 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:50:48 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:51:27 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:51:34 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:51:47 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:51:54 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:54:05 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:54:11 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:55:21 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:56:13 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:56:16 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:56:34 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 11:57:12 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 12:58:48 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 12:58:48 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 13:01:17 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 13:01:18 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 13:01:56 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
+[14-May-2024 13:01:56 UTC] Stripe Notice: Undefined property of Stripe\Invoice instance: product
