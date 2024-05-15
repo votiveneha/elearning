@@ -50,6 +50,7 @@
                   <thead>
                   <tr>
                     <th>ID</th>
+                    <th>Customer Name</th>
                     <th>Customer Email</th>
                     <th>Amount</th>
                     <th>Plan Name</th>
@@ -64,8 +65,21 @@
                   
                   <tr class="tableRow" data-question_id="{{ $list->payment_id }}">
                     <td class="serial-number"> {{ $i }}</td>
+                    
+                    <td>
+                      <?php
+                        
+                        
+                        $payment_db_product = $stripe->invoices->retrieve($list->invoice_id, []);
+
+                        
+                        echo $payment_db_product->customer_name;
+                        //print_r($product);
+                      ?>
+                    </td>
                     <td>{{ $list->customer_email }}</td>
                     <td>${{ $list->amount }}</td>
+                    
                     <td>
                       <?php
                         

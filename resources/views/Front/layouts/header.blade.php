@@ -1,24 +1,28 @@
 <?php
-  $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-  $invoices = $stripe->invoices->all();
-  $user_email = Auth::guard("customer")->user()->email;
-  $payent_data = DB::table("payments")->where("customer_email",$user_email)->get();
-  $p_data = array();
-  foreach ($payent_data as $pay_data) {
-    $p_data[] = $pay_data->pay_id;
-  }
-  foreach ($invoices as $invoice) {
-    if($user_email == $invoice->customer_email){
-      $paymentIntents = $stripe->paymentIntents->retrieve($invoice->payment_intent, []);
-      $amount_paid = number_format((float)$invoice->amount_paid/100, 2, '.', '');
-      
-      if(!in_array($paymentIntents->id, $p_data)){
-        DB::table("payments")->insert([
-          ['customer_id' => $invoice->customer, 'pay_id' => $paymentIntents->id, 'customer_email' => $invoice->customer_email,'amount' => $amount_paid,'invoice_id' => $invoice->id,'payment_status' => $paymentIntents->status,'created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')]
-        ]);
-      }
-      
+  $email_data = Auth::guard("customer")->user();
+  if($email_data){
+    $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+    $invoices = $stripe->invoices->all();
 
+    $user_email = Auth::guard("customer")->user()->email;
+    $payent_data = DB::table("payments")->where("customer_email",$user_email)->get();
+    $p_data = array();
+    foreach ($payent_data as $pay_data) {
+      $p_data[] = $pay_data->pay_id;
+    }
+    foreach ($invoices as $invoice) {
+      if($user_email == $invoice->customer_email){
+        $paymentIntents = $stripe->paymentIntents->retrieve($invoice->payment_intent, []);
+        $amount_paid = number_format((float)$invoice->amount_paid/100, 2, '.', '');
+        
+        if(!in_array($paymentIntents->id, $p_data)){
+          DB::table("payments")->insert([
+            ['customer_id' => $invoice->customer, 'pay_id' => $paymentIntents->id, 'customer_email' => $invoice->customer_email,'amount' => $amount_paid,'invoice_id' => $invoice->id,'payment_status' => $paymentIntents->status,'created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')]
+          ]);
+        }
+        
+
+      }
     }
   }
   // echo "<pre>";

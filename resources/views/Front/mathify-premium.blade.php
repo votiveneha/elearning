@@ -84,37 +84,82 @@ get online.</p>
 
   $price2 = $stripe->prices->retrieve($product3->default_price, []);
   $price_default2 = $price2->unit_amount/100;
+
+  $user_email = Auth::guard("customer")->user()->email;
+
+  $invoices = $stripe->invoices->all();
+  //echo "<pre>";
+  //print_r($invoices);
+  $in_array = array();
+  foreach ($invoices as $key => $in) {
+    if($in->customer_email == $user_email){
+      $payment_db_product = $stripe->invoices->retrieve($in->id, [])->lines['data'][0]->plan->product;
+
+               
+      $product = $stripe->products->retrieve($payment_db_product, []);
+      
+      array_push($in_array, array("email"=>$in->customer_email,"created"=>$in->created,"plan"=>$product->name,"plan_start"=>$in->lines['data'][0]->period->start,"plan_end"=>$in->lines['data'][0]->period->end));
+      //echo $in->customer_email;
+      
+    }
+  }
+  //print_r($in_array);
+  // foreach ($variable as $key => $value) {
+  //   # code...
+  // }
+
+
+
+  $active_plan = $in_array[0]["plan"];
+  $plan_end = $in_array[0]["plan_end"]."<br>";
+  $current_date = date('m/d/Y h:i:s', time());
+  $date = strtotime($current_date); 
+
+  if($plan_end > $date){
+    $plan_active = true;
+  }
 ?>
+<style>
+.prices-level.active {
+    border: 3px solid #0098ef; 
+   
+}
+
+.subscribe_active {
+  
+  cursor: not-allowed; 
+}
+</style>
 <div class="col-md-4">
-  <div class="prices-level">
+  <div class="prices-level @if($active_plan == $product1->name && $plan_active) active @endif">
 <h5>{{ $product1->name }}</h5>
 
 <h1>${{ $price_default }}/Month</h1>
 <p>Billed monthly as ${{ $price_default }}</p>
 
-<a href="https://buy.stripe.com/test_00g2ap3fdfivfT29AD">Subscribe</a>
+<a href="https://buy.stripe.com/test_00g2ap3fdfivfT29AD" class="@if($active_plan == $product1->name && $plan_active) subscribe_active @endif">Subscribe</a>
 </div>  
 </div>
 
 <div class="col-md-4">
-  <div class="prices-level">
+  <div class="prices-level @if($active_plan == $product2->name && $plan_active) active @endif">
 <h5>{{ $product2->name }}</h5>
 
 <h1>${{ $price_default1 }}/Six Month</h1>
 <p>Billed every 6 months as ${{ $price_default1 }}</p>
 
-<a href="https://buy.stripe.com/test_9AQeXb175fiv7mw3cg">Subscribe</a>
+<a href="https://buy.stripe.com/test_9AQeXb175fiv7mw3cg" class="@if($active_plan == $product2->name && $plan_active) subscribe_active @endif">Subscribe</a>
 </div>  
 </div>
 
 <div class="col-md-4">
-  <div class="prices-level">
+  <div class="prices-level @if($active_plan == $product3->name && $plan_active) active @endif">
 <h5>{{ $product3->name }}</h5>
 
 <h1>${{ $price_default2 }}/Year</h1>
 <p>Billed every 1 Year as ${{ $price_default2 }}</p>
 
-<a href="https://buy.stripe.com/test_cN2g1f1756LZ0Y88wy">Subscribe</a>
+<a href="https://buy.stripe.com/test_cN2g1f1756LZ0Y88wy" class="@if($active_plan == $product3->name && $plan_active) subscribe_active @endif">Subscribe</a>
 </div>  
 </div>
 <!-- <script async src="https://js.stripe.com/v3/pricing-table.js"></script>

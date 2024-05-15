@@ -82,7 +82,7 @@
             </a>
           </li> 
           <li class="nav-item">
-            <a href="{{ url('/admin/payment_details') }}?question_type=exam_builder" class="nav-link">
+            <a href="{{ url('/admin/payment_details') }}" class="nav-link">
               <i class="nav-icon fas fa-book-open"></i>
               <p>
                 Payment Management

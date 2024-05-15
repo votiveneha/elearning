@@ -1,6 +1,13 @@
 @extends('Front.layouts.layout')
 @section('title', 'User Dashboard')
 
+@section('current_page_css')
+<style type="text/css">
+  .card.userproc {
+    margin-bottom: 12px;
+  }
+</style>
+@endsection
 
 @section('content')
 <div id="main" class="dashboard_main">
@@ -368,17 +375,42 @@ function toogleDataSeries(e){
   }else{
     $paid_courses = false;
   }
-  
-  // $p_data = $payment_data->invoice_id;
-  
-  
-  // $payment_db_product = $stripe->invoices->retrieve($p_data, [])->lines['data'][0]->plan->product;
 
-                        
-  // $product = $stripe->products->retrieve($payment_db_product, []);
-  // echo $product->name;
+
+  
+  $invoices = $stripe->invoices->all();
+  //echo "<pre>";
+  //print_r($invoices);
+  $in_array = array();
+  foreach ($invoices as $key => $in) {
+    if($in->customer_email == $user_email){
+      $payment_db_product = $stripe->invoices->retrieve($in->id, [])->lines['data'][0]->plan->product;
+
+               
+      $product = $stripe->products->retrieve($payment_db_product, []);
+      
+      array_push($in_array, array("email"=>$in->customer_email,"created"=>$in->created,"plan"=>$product->name,"plan_start"=>$in->lines['data'][0]->period->start,"plan_end"=>$in->lines['data'][0]->period->end));
+      //echo $in->customer_email;
+      
+    }
+  }
+  //print_r($in_array);
+  // foreach ($variable as $key => $value) {
+  //   # code...
+  // }
+
+
+
+  $active_plan = $in_array[0]["plan"];
+  $plan_end = $in_array[0]["plan_end"]."<br>";
+  $current_date = date('m/d/Y h:i:s', time());
+  $date = strtotime($current_date); 
+
+  if($plan_end > $date){
+    $plan_active = true;
+  }
 ?>
-@if($paid_courses)
+@if($paid_courses && $plan_active)
 @foreach($course_data as $c_data)
 
 @if($c_data->status == 1 && $c_data->deleted_at == NULL)
