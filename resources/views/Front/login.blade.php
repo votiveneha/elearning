@@ -64,7 +64,7 @@ $(function() {
         <div class="row centr-form">
         <div class="col-md-5 login-screen-main">
           <div class="login-screen">
-          <h3><img src="{{ url('/public') }}/assets/img/logo.png"> </h3>
+          <h3><a href="{{ url('/') }}"><img src="{{ url('/public') }}/assets/img/logo.png"></a> </h3>
           <h5> Sign in with Mathify</h5>
           @if (\Session::has('error'))
               <div class="alert alert-danger">

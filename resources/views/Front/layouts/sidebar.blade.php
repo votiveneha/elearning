@@ -13,10 +13,10 @@ pie_chart
 grid_view
 </i><span class="icon-text">Courses</span></a><br> -->
 
-<a href="{{ url('/user/exam_builder') }}"><i class="material-symbols-outlined">
+<!-- <a href="{{ url('/user/exam_builder') }}"><i class="material-symbols-outlined">
 content_paste_search
 </i><span class="icon-text"></span>Exam Builder</a>
-<br>
+<br> -->
 
 <a href="{{ url('/user/session_history') }}"><i class="material-symbols-outlined">
 history

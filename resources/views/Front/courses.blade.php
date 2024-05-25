@@ -5,7 +5,7 @@
 <section class="learnworlds-size-normal">
   <div class="container">
   <div class="row">
-     <div class="col-md-12 ">
+     <div class="col-md-12 line-holder">
       <div class="h-second">
       <h2>Maths Advanced Course Syllabus</h2>
       <center><p> All Year 11 & Year 12 Content Organised so You Don't Have To</p></center>
@@ -42,33 +42,6 @@
           <div class="timeline-panel">
             <div class="timeline-heading">
               <p class="m-1"><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Year 11</small></p>
-              <h4 class="timeline-title">Trigonometry</h4>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-body">
-            <ul> 
-              <li><i class='bx bxs-circle'></i> Basic Trigonometry Ratios (I) </li>
-              <li><i class='bx bxs-circle'></i> Quadrants & Related Angles (II) </li>
-               <li><i class='bx bxs-circle'></i> 
-Sine and Cosine Rule (III) </li>
-                <li><i class='bx bxs-circle'></i> Radians (IV) </li>
-                 <li><i class='bx bxs-circle'></i> Trigonometry Function Graphs (V) </li>
-                  <li><i class='bx bxs-circle'></i> Arc Length and Sector Area (VI) </li>  
-                  <li><i class='bx bxs-circle'></i>Trigonometric Identities (VII)</li>
-                  <li><i class='bx bxs-circle'></i> Trigonometric Equations (VIII) </li>
-                  <li><i class='bx bxs-circle'></i> Applications of Trigonometry (IX) </li>
-                   <li><i class='bx bxs-circle'></i> 3D Trigonometry (X) </li>
-
-             </ul>
-            </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <p class="m-1"><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Year 11</small></p>
               <h4 class="timeline-title">Exponentials</h4>
             </div>
             <div class="timeline-body">
@@ -92,7 +65,42 @@ Index Laws (I)
             </div>
           </div>
         </li>
-        <li class="timeline-inverted">
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <p class="m-1"><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Year 11</small></p>
+              <h4 class="timeline-title">Functions</h4>
+            </div>
+            <div class="timeline-body">
+              <div class="timeline-body">
+            <ul> 
+              <li><i class='bx bxs-circle'></i> Introduction, Domain and Range (I)
+ </li>
+              <li><i class='bx bxs-circle'></i> Functions and Relations (II)
+ </li>
+               <li><i class='bx bxs-circle'></i> Interval Notation (III)
+ </li>
+                <li><i class='bx bxs-circle'></i> Linear Functions and Problems (IV)
+ </li>
+                 <li><i class='bx bxs-circle'></i> Quadratics and Parabolas (V)
+</li>
+                  <li><i class='bx bxs-circle'></i> Circles and Semicircles (VI)
+ </li>  
+                  <li><i class='bx bxs-circle'></i> Cubic Functions (VII)
+ </li>
+                  <li><i class='bx bxs-circle'></i> Odd and Even Functions (VIII)
+ </li>
+ <li><i class='bx bxs-circle'></i>Composite Functions & Piecewise (IX) </li>
+<li><i class='bx bxs-circle'></i>Polynomials and Sketching (X) </li>
+<li><i class='bx bxs-circle'></i>Graph Reflections (XI) </li>
+<li><i class='bx bxs-circle'></i>Hyperbolas and Inverse Variation (XII) </li>
+             </ul>
+            </div>
+            </div>
+          </div>
+        </li>
+       <!--  <li class="timeline-inverted">
            <div class="timeline-panel">
             <div class="timeline-heading">
               <p class="m-1"><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Year 11</small></p>
@@ -151,8 +159,8 @@ Index Laws (I)
             </div>
           </div>
         </li>
-   
-        <li class="timeline-inverted">
+    -->
+ <!--        <li class="timeline-inverted">
           <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
            <div class="timeline-panel">
             <div class="timeline-heading">
@@ -174,8 +182,8 @@ Index Laws (I)
             </div>
             </div>
           </div>
-        </li>
-               <li>
+        </li> -->
+       <!--         <li>
           <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
             <div class="timeline-panel">
             <div class="timeline-heading">
@@ -200,7 +208,7 @@ Index Laws (I)
             </div>
           </div>
         </li>
-   
+    -->
         <li class="timeline-inverted">
           <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
            <div class="timeline-panel">

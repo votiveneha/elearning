@@ -7,10 +7,9 @@
           <div class="col-lg-6 col-md-6">
      <center> <h4> Join Our Waitlist</h4></center> 
             <div class="hsc-baner">
-<form action="" method="post" style="width: 100%;">
-              <input type="email" name="email" placeholder="E-mail address"  class="learnworlds-input">
-              <input type="submit" value="Submit" class="subscri-tect">
-            </form>
+              <a href="{{ url('/register') }}" class="subscri-tect">Sign Up</a>  
+              
+            
 
           </div>
            

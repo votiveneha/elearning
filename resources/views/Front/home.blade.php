@@ -16,13 +16,13 @@
 Backed by powerful analytics for every question you complete.</p>
 
 </div>
-<div class="hsc-baner">
+<!-- <div class="hsc-baner">
 <form action="" method="post">
               <input type="email" name="email" class="learnworlds-input" placeholder="E-mail address">
-              <input type="submit" value="Keep me updated" class="subscri-tect">
+              <input type="submit" value="Sign Up For Free" class="subscri-tect">
             </form>
 
-          </div>
+          </div> -->
 
  <div class="col-md-10 m-auto">
 <div class="monitore-screen">
@@ -34,7 +34,7 @@ Backed by powerful analytics for every question you complete.</p>
 
 <h3 class="learnworlds-heading3-normal">
   <p style="text-align: center;">
-            Releasing For Maths Advanced (2U) in Early May.</p>
+            Now Live For Maths Advanced (2U) Year 11 & 12.</p>
           </h3>
 
 
@@ -79,7 +79,7 @@ extensive HSC platform</h2>
                  
                   </p>
                   <h3>Liz. S</h3>
-                  <h4>STUDENT</h4>
+                  <h4>PARENT</h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -156,7 +156,7 @@ the <span style="color: rgb(33, 150, 243);">HSC Syllabus</span></p>
 <li><i class='bx bxs-check-circle'></i> Covering all year 11 & 12 content</li>
 </ul>
 
-<a href="#" class="view-simple">View Sample Booklet <i class='bx bx-chevron-right'></i></a>
+<!-- <a href="#" class="view-simple">View Sample Booklet <i class='bx bx-chevron-right'></i></a> -->
 </div>
 </div>
 
@@ -329,7 +329,7 @@ Track how many questions you've completed so far</li>
   </div>
 </section>
 
-<section class="learnworlds-size-normal pt-3 secti7">
+<!-- <section class="learnworlds-size-normal pt-3 secti7">
   <div class="container">
   <div class="row">
      <div class="col-md-12 mb-5">
@@ -381,7 +381,7 @@ Session Analysis
 
 </div>
 </div>
-</section>
+</section> -->
 
 
 

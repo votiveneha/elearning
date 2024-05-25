@@ -1845,6 +1845,9 @@ justify-content: space-between;
     margin-bottom: 10px;
        
 }
+.line-holder {
+    margin-bottom: 0px !important;
+}
 
 
 .learnworlds-size-normal {
@@ -2225,7 +2228,8 @@ text-align: center;
     color: #FFF;
     border-radius: 10px;
     position: relative;
-    left: -57px;
+    /*left: -57px;*/
+    top:16px;
     align-items: center;
 }
 
@@ -2944,6 +2948,7 @@ font-size: 25px !important;
   color: #FFF;
   border-radius: 6px !important;
   left: -6px !important;
+  top:10px !important;
 }
 .hsc-baner form {
   
@@ -3480,4 +3485,7 @@ color: #000;
  
     border-radius: 31px;
     box-shadow: 13px 12px 0px #2196f3;
+}
+.line-holder{
+  margin-bottom: 100px;
 }

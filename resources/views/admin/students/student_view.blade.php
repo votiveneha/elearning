@@ -1,5 +1,38 @@
 @extends('admin.layouts.layout')
 
+@section('current_page_css')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<style type="text/css">
+  #toast-container > div{
+    width:311px;
+  }
+</style>
+@endsection
+
+@section('js_bottom')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+<script type="text/javascript">
+  $(".remove_courses").click(function(){
+    var customer_id = $(".student_id").val();
+    $.ajax({
+      type: "POST",
+      url: "{{ url('admin/remove_courses') }}",
+      data: {customer_id:customer_id,"_token": "{{ csrf_token() }}"},
+      cache: false,
+      success: function(data){
+         if(data == 1){
+          toastr.options.timeOut = 1500; // 1.5s
+          toastr.success('The student has been removed from the courses');
+          $(".remove_courses").hide();
+          
+         }
+         
+      }
+    });
+  });
+</script>
+@endsection
+
 @section('content')
 
 <div class="wrapper">
@@ -36,7 +69,7 @@
           <div class="card-body">
             <form action="{{ url('/admin/student_action') }}" id="student_form" method="post">
                       {!! csrf_field() !!}
-                       <input type="hidden" class="form-control" name="id" value="{{$id}}">
+                       <input type="hidden" class="form-control student_id" name="id" value="{{$id}}">
 
             <div class="row">
               <div class="col-md-6">
@@ -107,6 +140,7 @@
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
+              
             </div>
             <!-- /.row -->
 
@@ -137,7 +171,9 @@
           
         </form>
          <div class="card-footer">
-            <input type="button"   class="btn btn-primary" value="Go Back" onClick="history.go(-1);"  />
+            @if($student_detail[0]->course_id != NULL)
+            <input type="button"   class="btn btn-primary remove_courses" value="Remove from courses"  />
+            @endif
           </div>
             <!-- /.row -->
           </div>

@@ -102,18 +102,18 @@ class TheoryController extends Controller
         $theory = DB::table("theory")->where("course_id",$request->course_id)->where("topic_id",$request->topic_id)->where("st_id",$request->st_id)->first();
 
         if(!empty($theory)){
-            $fileName = $request->theory_pdf->getClientOriginalName();
-            $file = $request->file('theory_pdf');
-            $filePath = base_path() .'/public/assets/img/';
-            $file->move($filePath,$fileName);
+            // $fileName = $request->theory_pdf->getClientOriginalName();
+            // $file = $request->file('theory_pdf');
+            // $filePath = base_path() .'/public/assets/img/';
+            // $file->move($filePath,$fileName);
             // $path = Storage::disk('public')->put($filePath, file_get_contents($request->theory_pdf));
             // $path = Storage::disk('public')->url($path);
             // $slug = Str::slug($title);
             DB::table('theory')
                 ->where('theory_id', $theory->theory_id)
                 ->update([
-                    'theory_pdf'=> $fileName,
-                    'pdf_path' => $fileName
+                    // 'theory_pdf'=> $fileName,
+                    'pdf_link' => $request->pdf_link
 
                     ]);
 
@@ -121,13 +121,13 @@ class TheoryController extends Controller
             Session::flash('message', 'Theory Updated Sucessfully!');
             return redirect()->to('/admin/subtopiclist1/'.base64_encode($request->course_id)."/".base64_encode($request->topic_id));
         }else{
-            $fileName = $request->theory_pdf->getClientOriginalName();
-            $file = $request->file('theory_pdf');
-            $filePath = base_path() .'/public/assets/img/';
-            // $path = Storage::disk('public')->put($filePath, file_get_contents($request->theory_pdf));
-            // $path = Storage::disk('public')->url($path);
-            // $slug = Str::slug($title);
-            $file->move($filePath,$fileName);
+            // $fileName = $request->theory_pdf->getClientOriginalName();
+            // $file = $request->file('theory_pdf');
+            // $filePath = base_path() .'/public/assets/img/';
+            // // $path = Storage::disk('public')->put($filePath, file_get_contents($request->theory_pdf));
+            // // $path = Storage::disk('public')->url($path);
+            // // $slug = Str::slug($title);
+            // $file->move($filePath,$fileName);
 
             $theory = new Theory;
             
@@ -135,8 +135,9 @@ class TheoryController extends Controller
             $theory->topic_id = trim($request->topic_id);
             $theory->st_id = trim($request->st_id);
             //$theory->slug = $slug;
-            $theory->theory_pdf = $fileName;
-            $theory->pdf_path = $fileName ;
+            //$theory->theory_pdf = $fileName;
+            $theory->pdf_link = $request->pdf_link;
+            //$theory->pdf_path = $fileName ;
             $theory->status = "1";
             $theory->save();
             $theory_id = $theory->theory_id;

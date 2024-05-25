@@ -193,11 +193,11 @@ window.onclick = function(event) {
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Upload PDF<span class="mandatory" style="color:red"> *</span></label>
+                  <!-- <label>Upload PDF<span class="mandatory" style="color:red"> *</span></label> -->
                   <input type="hidden" name="course_id" class="course_id-{{ $i }}" value="{{ $list->course_id }}">
                       <input type="hidden" name="topic_id" class="topic_id-{{ $i }}" value="{{ $list->topic_id }}">
                       <input type="hidden" name="st_id" class="st_id-{{ $i }}" value="{{ $list->st_id }}">
-                  <input type="file" class="form-control" name="theory_pdf" id="theory_pdf"><br>
+                  <!-- <input type="file" class="form-control" name="theory_pdf" id="theory_pdf"><br>
                   <?php
                     $theory = DB::table("theory")->where("course_id",$list->course_id)->where("topic_id",$list->topic_id)->where("st_id",$list->st_id)->first();
 
@@ -207,8 +207,13 @@ window.onclick = function(event) {
                       </embed>
                       <?php
                     }
-                  ?>
+                  ?> -->
+                  <label>Upload PDF Link<span class="mandatory" style="color:red"> *</span></label>
+                  <input type="text" name="pdf_link" class="form-control" value="">
                 </div>
+                <div class="form-group">
+
+                </div>  
                 <input type="submit" class="btn btn-primary" value="Submit" id="">
               </div>
             </div>

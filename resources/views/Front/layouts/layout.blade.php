@@ -29,7 +29,7 @@
   <link href="{{ url('/public') }}/assets/css/style.css" rel="stylesheet">
   @yield('current_page_css')
   <?php
-  if($_SERVER['REQUEST_URI'] != "/dev/login" and $_SERVER['REQUEST_URI'] != "/dev/register" and $_SERVER['REQUEST_URI'] != "/dev/user/start_quiz"){
+  if($_SERVER['REQUEST_URI'] != "/login" and $_SERVER['REQUEST_URI'] != "/register" and $_SERVER['REQUEST_URI'] != "/user/start_quiz"){
     ?>
     <style type="text/css">
       body{
@@ -40,7 +40,7 @@
   }
 ?>
 <?php
-  if($_SERVER['REQUEST_URI'] == "/dev/user/start_quiz"){
+  if($_SERVER['REQUEST_URI'] == "/user/start_quiz"){
     ?>
     <style type="text/css">
       body{
@@ -65,14 +65,14 @@
 
 <?php
   
-  if($_SERVER['REQUEST_URI'] != "/dev/login" and $_SERVER['REQUEST_URI'] != "/dev/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
+  if($_SERVER['REQUEST_URI'] != "/login" and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
     ?>
     @include('Front.layouts.header')
-    <?php if($_SERVER['REQUEST_URI'] != "/dev/user/user_status" and $_SERVER['REQUEST_URI'] != "/dev/user/settings" and $_SERVER['REQUEST_URI'] != "/dev/user/change_password"){ ?>
-      <?php if($_SERVER['REQUEST_URI'] != "/dev/user/dashboard"){ ?>
+    <?php if($_SERVER['REQUEST_URI'] != "/user/user_status" and $_SERVER['REQUEST_URI'] != "/user/settings" and $_SERVER['REQUEST_URI'] != "/user/change_password"){ ?>
+      <?php if($_SERVER['REQUEST_URI'] != "/user/dashboard"){ ?>
       <div id="main" style="margin-left: 80px;">
         <?php } ?>
-        <?php if($_SERVER['REQUEST_URI'] != "/dev/user/session_history"){ ?>
+        <?php if($_SERVER['REQUEST_URI'] != "/user/session_history"){ ?>
     <div class="class-box <?php if(strpos($_SERVER['REQUEST_URI'],'course_view')){ ?>topics<?php } ?>">
     <?php } ?>
     <?php } ?>
@@ -82,14 +82,14 @@
 ?>
 @yield('content')
 <?php
-  if($_SERVER['REQUEST_URI'] != "/dev/login" and $_SERVER['REQUEST_URI'] != "/dev/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
+  if($_SERVER['REQUEST_URI'] != "/login" and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
     ?>
     @include('Front.layouts.sidebar')
-    <?php if($_SERVER['REQUEST_URI'] != "/dev/user/user_status"  and $_SERVER['REQUEST_URI'] != "/dev/user/settings" and $_SERVER['REQUEST_URI'] != "/dev/user/change_password"){ ?>
-      <?php if($_SERVER['REQUEST_URI'] != "/dev/user/session_history"){ ?>
+    <?php if($_SERVER['REQUEST_URI'] != "/user/user_status"  and $_SERVER['REQUEST_URI'] != "/user/settings" and $_SERVER['REQUEST_URI'] != "/user/change_password"){ ?>
+      <?php if($_SERVER['REQUEST_URI'] != "/user/session_history"){ ?>
     </div>
     <?php } ?>
-    <?php if($_SERVER['REQUEST_URI'] != "/dev/user/dashboard"){ ?>
+    <?php if($_SERVER['REQUEST_URI'] != "/user/dashboard"){ ?>
   </div>
   <?php } ?>
   <?php

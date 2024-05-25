@@ -9,6 +9,26 @@
   form .input {
     width: 100% !important;
   }
+ #term_conditions-error {
+    position: relative;
+    top: 41px;
+}
+
+.terms_label1 {
+    margin-top: -22px !important;
+    line-height: 19px;
+    font-size: 15px;
+}
+
+.login-btn {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(37 112 215) 0%, rgb(37 128 217) 49%, rgb(36 165 222) 100%);
+    border: 0px solid #256cd6;
+    padding: 10px;
+    transition: 0.5s;
+    position: relative;
+    top: 12px;
+}
 </style>
 @endsection
 
@@ -19,6 +39,7 @@ $(function() {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
   $("form[name='registration']").validate({
+
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
@@ -49,6 +70,12 @@ $(function() {
         required: true,
         minlength: 8,
         equalTo: "#password"
+      },
+      term_conditions: {
+        required: true,
+        normalizer: function( value ) {
+          return $(".terms_label").addClass("terms_label1");
+        },
       }
     },
     // Specify validation error messages
@@ -67,15 +94,21 @@ $(function() {
         required: "Please enter the confirm password",
         minlength: "Password must be at least 8 characters long",
         equalTo: "Passwords must be same"
+      },
+      term_conditions: {
+        required: "Please check our terms & condition",
+        
       }
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
+      $(".term_conditions-error").insertAfter(".terms_label");
       form.submit();
     }
   });
 });
+
 </script>
 @endsection
 
@@ -121,50 +154,11 @@ $(function() {
                  <i class='bx bx-lock-open'></i>
                   <input type="password" name="c_password" class="form-control input" placeholder="Enter it once more, please"/>
               </div>
-             <!-- <div class="input-group favi-can">
-              <label for="Choose a Subscription">Choose a Subscription</label>
-              <div class="suscription_radio">
-                <?php
-                  $monthly_plan = $stripe->products->retrieve('prod_Q64MNNEvhv7i07', []);
-                  $monthly_price = $stripe->prices->retrieve($monthly_plan->default_price, []);
-                  $monthly_amount = "$".number_format((float)$monthly_price->unit_amount/100, 2, '.', '');
-
-                  $biannual_plan = $stripe->products->retrieve('prod_Q64NANzl3zhC4s', []);
-                  
-                  $biannual_price = $stripe->prices->retrieve($biannual_plan->default_price, []);
-                  
-                  $biannual_amount = "$".number_format((float)$biannual_price->unit_amount/100, 2, '.', '');
-
-                  $annual_plan = $stripe->products->retrieve('prod_Q64OVqbEf4P8mq', []);
-                  $annual_price = $stripe->prices->retrieve($annual_plan->default_price, []);
-                  
-                  $annual_amount = "$".number_format((float)$annual_price->unit_amount/100, 2, '.', '');
-                  
-                  
-                ?>
-                <div class="suscription">
-                  <input type="radio" name="subscription" value="free"><label>Free</label>
-                </div>
-                <div class="suscription">
-                  <input type="radio" name="subscription" value="monthly_subscription"><label>{{ $monthly_plan->name }}({{ $monthly_amount }} {{ $monthly_price->currency }}/{{ $monthly_price->recurring->interval }})</label>
-                </div>
-                <div class="suscription">
-                  <input type="radio" name="subscription" value="biannual_subscription"><label>{{ $biannual_plan->name }}({{ $biannual_amount }} {{ $biannual_price->currency }}/{{ $biannual_price->recurring->interval_count }} {{ $biannual_price->recurring->interval }})</label>
-                </div>
-                <div class="suscription">
-                  <input type="radio" name="subscription" value="annual_subscription"><label>{{ $annual_plan->name }}({{ $annual_amount }} {{ $annual_price->currency }}/{{ $annual_price->recurring->interval }})</label>
-                </div>
+              <div class="input-group">
+                 
+                <input id="checkbox" type="checkbox" name="term_conditions" style="height:auto !important;" />
+                <label for="checkbox" class="terms_label" style="margin-left: 22px;margin-top: -18px;text-align: left;"> By creating an account, you agree to the <a href="{{ url('/terms') }}">Terms and Conditions</a>.</label>
               </div>
-             </div>  -->
-            <!-- <div class="d-flex justify-content-between rem-pass mb-3">
-
-            <div class="checkbox">
-            <label class="pri-txt"><input type="checkbox" value="" style="position: relative; top: 4px;"> I agree to the <a href="#">Terms</a> of Use and <a href="#"> Privacy Notice</a> </label>
-            </div>
-       
-
-          </div>
-          <br> -->
               <button type="submit" class="btn btn-success login-btn"><span class="glyphicon glyphicon-off"></span> Start your learning journey</button>
               <div class="dont-asc mt-3">
            <p class="m-0 mb-2"> Already Have an account</p>

@@ -54,10 +54,11 @@
               </div>
               <div class="col-md-6">
                 <label>Subscription Type<span class="mandatory" style="color:red"> *</span></label>
+               
                 <select class="form-control" name="subscription_type" id="subscription_type">
-                      <option value="Free" @if($course_detail[0]->subscription_type) == "Free") selected @endif>Free</option>
+                      <option value="Free" @if($course_detail[0]->subscription_type == "Free") selected @endif>Free</option>
                       
-                      <option value="Paid" @if($course_detail[0]->subscription_type) == "Paid") selected @endif>Paid</option>
+                      <option value="Paid" @if($course_detail[0]->subscription_type == "Paid") selected @endif>Paid</option>
                       
                       
                     </select>

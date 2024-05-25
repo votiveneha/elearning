@@ -292,7 +292,21 @@ Additional terms and conditions may apply to the provision of certain Services. 
 <b>24.2</b> We may from time to time, if you opt to receive it, send you information about Our products and/or services. If you do not wish to receive such information, please click on the ‘Unsubscribe’ link in any email which you receive from Us.</li>
 </ul>
 
-<h4> 25. Law and Jurisdiction</h4>
+<h4> 25. Refunds</h4>
+
+<p> We strive to ensure that our subscribers have a valuable and enriching experience with our online math platform. Our refund policy allows for full refunds within 14 days of the initial subscription purchase, subject to the following conditions:</p>
+<ul>
+<li>
+<b>25.1</b> Discretionary Basis: Refunds are granted at our sole discretion. While we aim to accommodate all refund requests within the stipulated time frame, we reserve the right to decline a refund request based on our assessment of the situation. </li>
+<li>
+<b>25.2</b> Refund Request Process: To request a refund, please contact our customer service team with your subscription details and the reason for your refund request. Our team will review your request and inform you of our decision.</li>
+<li>
+<b>25.3</b> Eligibility: Refunds are applicable only to the initial subscription purchase made within the last 14 days. Subsequent renewals or recurring subscription fees are not eligible for refunds.</li>
+<li>
+<b>25.4</b> Non-Refundable Situations: Refunds will not be granted for requests made after the 14-day period, or for accounts that have been found to violate our terms of service. By subscribing to our online math platform, you acknowledge and agree to this refund policy. We appreciate your understanding and cooperation.</li>
+</ul>
+
+<h4> 26. Law and Jurisdiction</h4>
 <p> These Terms and Conditions and the relationship between you and <b>MATHIFYHSC</b> shall be governed by and construed in accordance with the Law of England and Wales and <b>MATHIFYHSC</b> and you agree to submit to the exclusive jurisdiction of [COUNTRY].</p>
 
 

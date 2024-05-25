@@ -41,6 +41,7 @@
 
       @foreach($topics as $topic)
       @if($topic->status == 1 && $topic->deleted_at == NULL)
+      
       <li>
         <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-{{ $i }}"><span><?php echo $i; ?></span> {{ $topic->title }} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
         <div id="accordion-list-{{ $i }}" class="collapse" data-bs-parent=".accordion-list">

@@ -82,8 +82,7 @@ class AdminController extends Controller
     public function show_payment(){
         $data['payments'] = DB::table("payments")->get();
         //print_r($data['payments']);die;
-        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-        $data['stripe'] = $stripe;
+        
         return view('admin.payment.show_payment')->with($data);
     } 
 

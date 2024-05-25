@@ -32,6 +32,22 @@ use App\Http\Controllers\StripePaymentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/clear', function () {
+    $exitCode = Artisan::call('view:clear', []);   
+          return '<h1>cache cleared</h1>';
+    });
+    Route::get('/config-cache', function() {
+        $exitCode = Artisan::call('config:cache');
+        $exitCode = Artisan::call('config:clear');
+          return '<h1>config cache cleared</h1>';
+    
+    });
+    Route::get('/view-clear', function() {
+        $exitCode = Artisan::call('view:clear');
+        return '<h1>View cache cleared</h1>';
+    });
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -55,6 +71,8 @@ Route::post('/submit_login', [HomeController::class, 'submit_login'])->name("sub
 Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name("stripe");
 Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name("stripe.post");
 Route::get('/mathify_works', [HomeController::class, 'mathify_works'])->name("mathify_works");
+Route::get('/pricing', [HomeController::class, 'pricing_page'])->name("pricing");
+Route::get('/error_page', [HomeController::class, 'error_page'])->name("error_page");
 Route::group(['prefix' => 'user', 'middleware' => 'user_auth:customer'], function () {
 	Route::get('/courses_list', [HomeController::class, 'user_dashboard'])->name("courses_list");
 	Route::get('/course_view/{id}', [UserController::class, 'course_view1'])->name("course_view");
@@ -80,11 +98,15 @@ Route::group(['prefix' => 'user', 'middleware' => 'user_auth:customer'], functio
 	Route::get('/change_password', [HomeController::class, 'change_password'])->name("change_password");
 	Route::post('/postuser_ChangePassword', [HomeController::class, 'postuser_ChangePassword'])->name("postuser_ChangePassword");
 	Route::get('/pricing', [HomeController::class, 'pricing_page'])->name("pricing");
+	Route::get('/thankyou', [UserController::class, 'thankyou'])->name("thankyou");
+	Route::post('/cancel_subscription', [UserController::class, 'cancel_subscription'])->name("cancel_subscription");
+	Route::get('/store_data', [UserController::class, 'store_data'])->name("store_data");
 	Route::get('/logout', [HomeController::class, 'user_logout'])->name("user_logout");
 });
 
 Route::get('/admin/add_questions', [AdminquesController1::class, 'index'])->name('add_questions');
 Route::post('/admin/post_questions', [AdminquesController1::class, 'post_questions'])->name('post_questions');
+
 Route::get('/admin/add_questions_bank/{chapter_id?}', [AdminquesController1::class, 'add_questions_bank'])->name('add_questions_bank');
 Route::post('/admin/post_questions_bank', [AdminquesController1::class, 'post_questions_bank'])->name('post_questions_bank');
 Route::post('question/img', [AdminquesController1::class, 'uploadMedia'])->name('admin.question.uploadMedia');
@@ -104,6 +126,7 @@ Route::get('/admin/student-view/{id}', [StudentController::class, 'student_view'
 Route::get('/admin/student-form/{id}', [StudentController::class, 'student_form'])->name("student.edit");
 Route::get('/admin/student-form', [StudentController::class, 'student_form'])->name("student.edit");
 Route::post('/admin/student_action', [StudentController::class, 'student_action'])->name("student.action");
+Route::post('/admin/remove_courses', [StudentController::class, 'remove_courses'])->name("remove_courses");
 
 Route::get('/admin/payment_details', [AdminController::class, 'show_payment'])->name("show_payment");
 

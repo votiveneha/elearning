@@ -40,9 +40,9 @@ class StudentController extends Controller
 
         $id = base64_decode($request->id);
         $student_detail  = DB::table('users')->where('id', '=' ,$id)->get();
-        
+        $course_list  = DB::table('courses')->where('subscription_type', "Paid")->where('status', "1")->get();
         $student_list  = DB::table('users')->where('id', '!=' ,$id)->get();
-        $data_onview = array('student_detail' =>$student_detail,'id'=>$id,'student_list'=>$student_list);
+        $data_onview = array('student_detail' =>$student_detail,'id'=>$id,'student_list'=>$student_list,'course_list'=>$course_list);
         return View('admin.students.student_form')->with($data_onview);
 
         }else{
@@ -50,7 +50,8 @@ class StudentController extends Controller
         $student_detail  = DB::table('users')->where('id', '=' ,$id)->get();
 
         $user_list  = DB::table('users')->where('id', '!=' ,$id)->get();
-        $data_onview = array('id'=>$id,'user_list'=>$user_list,'student_detail'=>$student_detail);
+        $course_list  = DB::table('courses')->where('subscription_type', "Paid")->where('status', "1")->get();
+        $data_onview = array('id'=>$id,'user_list'=>$user_list,'student_detail'=>$student_detail,'course_list'=>$course_list);
         return View('admin.students.student_form')->with($data_onview);
         
         }
@@ -80,9 +81,9 @@ class StudentController extends Controller
 
             $student = new Students;
             $student->name = trim($request->name);
-            
+            $student->course_id = trim($request->course_id);
             $student->email = trim($request->email);
-            $student->password = $request->password;
+            $student->password = Hash::make($request->password);
             $student->profile_img = $imageName;
             $student->save();
             //$student_id = $student->id;
@@ -98,7 +99,7 @@ class StudentController extends Controller
              DB::table('users')
                 ->where('id', $id)
                 ->update(['first_name' => trim($request->fname),
-
+                    'course_id' => $request->course_id,
                     'last_name'=>  trim($request->lname)
 
 
@@ -146,6 +147,20 @@ class StudentController extends Controller
         return View('admin.students.student_view')->with($data_onview);
 
         }
+    }
+
+    public function remove_courses(Request $request){
+        $customer_id = $request->customer_id;
+
+
+        $update_courses_status = DB::table('users')
+                    ->where('id', $request->customer_id)
+                    ->update(['course_id' => NULL]);
+        $update_payment_status = DB::table('payments')
+                    ->where('customer_id', $request->customer_id)
+                    ->update(['payment_status' => "Cancelled"]);            
+
+        return $update_courses_status;             
     }
 
     public function student_status(Request $request){

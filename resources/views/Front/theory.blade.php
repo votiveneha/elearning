@@ -4,23 +4,39 @@
 @section('current_page_css')
 <style type="text/css">
   ::-webkit-scrollbar {
+    width: 0 !important;
+}
+@media print {
+  body {
     display: none;
+  }
 }
 </style>
 @endsection
 
 @section("current_page_js")
 <script type="text/javascript">
-document.onmousedown = disableRightclick;
-var message = "Right click not allowed !!";
-document.querySelector('#myFrame').scrolling = "no";
-function disableRightclick(evt){
-    if(evt.button == 2){
-        //alert(message);
-        return false;    
-    }
-}
-document.addEventListener('contextmenu', event => event.preventDefault());
+
+
+// document.onmousedown = disableRightclick;
+// var message = "Right click not allowed !!";
+// document.querySelector('#myFrame').scrolling = "no";
+// function disableRightclick(evt){
+//     if(evt.button == 2){
+//         //alert(message);
+//         return false;    
+//     }
+// }
+// document.addEventListener('contextmenu', function(e){
+// 	e.preventDefault();
+// });
+
+// document.addEventListener('keydown',function(e){
+// 	if(e.ctrlKey || e.metaKey){
+// 		e.preventDefault();
+// 	}
+// });
+
 $(".pdf-line").hover(function(){
   $.ajax({
     type: "POST",
@@ -53,9 +69,32 @@ keyboard_backspace
  	?>
   <p>  Theory - {{ $theory->title }}</p>
 
- <center> 
+ <center > 
         <!-- <iframe id="fraDisabled" src="{{ url('/public') }}/assets/img/{{ $queries->theory_pdf }}#toolbar=0" width="100%" height="500"/> -->
-          <iframe id="myFrame" src="{{ url('/public') }}/assets/img/{{ $queries->theory_pdf }}#toolbar=0" style="pointer-events: none;" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+
+          <?php
+//           echo url('/public')."/assets/img/".$queries->theory_pdf;
+//            $pdf = public_path()."/assets/img/".$queries->theory_pdf[0];
+// $imagick = new Imagick();
+  
+//         $imagick->readImage($pdf);
+  
+//         $saveImagePath = public_path('/assets/img/pdf_images/');
+//         $imagick->writeImages($saveImagePath, true);
+  
+//         echo response()->file($saveImagePath);
+
+          ?>
+        
+          @if($queries->pdf_link)
+          <div class="">
+            <iframe src="{{ $queries->pdf_link }}" width="640" height="480" allow="autoplay"></iframe>
+          </div>
+          @else
+            <iframe id="myFrame" src="{{ url('/public') }}/assets/img/{{ $queries->theory_pdf }}#toolbar=0" width="100%" height="500" frameborder="0" onload="injectJS()"></iframe>
+          @endif
+          
+          <!-- <iframe id="myFrame" src="{{ url('/public') }}/assets/img/{{ $queries->theory_pdf }}#toolbar=0" width="100%" height="500" frameborder="0" onload="injectJS()"></iframe> -->
          <!-- <embed id="fraDisabled" src="{{ url('/public') }}/assets/img/{{ $queries->theory_pdf }}#toolbar=0" width="100%" height="500">  -->
         </embed> 
     </center> 
@@ -80,5 +119,7 @@ keyboard_backspace
   </div>
 @endif
 </div>
+<script>
 
+</script>
 @endsection

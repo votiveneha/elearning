@@ -62,7 +62,7 @@
                   </div>
                 </div>
               </div>
-			  <div class="col-md-3 info-stats stretch-card grid-margin">
+			  <!-- <div class="col-md-3 info-stats stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                   <div class="card-body">
                     <img src="https://mathifyhsc.com/dev/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
@@ -88,7 +88,7 @@
                     <h2 class="mb-0">68 hrs</h2>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>	
  
 	   <div class="row stats_score">
@@ -190,7 +190,7 @@ function toogleDataSeries(e){
 
 </script>
 
-      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <!-- <div id="chartContainer" style="height: 300px; width: 100%;"></div> -->
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 </div>
@@ -369,8 +369,9 @@ function toogleDataSeries(e){
 <?php
   $user_email = Auth::guard("customer")->user()->email;
   $payment_data = DB::table("payments")->where("customer_email",$user_email)->get();
-  
-  if(count($payment_data)>0){
+  $user_data = DB::table("users")->where("email",$user_email)->first();
+  //echo $user_data->course_id;
+  if(count($payment_data)>0 && $payment_data[0]->payment_status == "Successful"){
     $paid_courses = true;
   }else{
     $paid_courses = false;
@@ -400,21 +401,26 @@ function toogleDataSeries(e){
   // }
 
 
+  if($in_array){
+    $active_plan = $in_array[0]["plan"];
+    $plan_end = $in_array[0]["plan_end"]."<br>";
+    $current_date = date('m/d/Y h:i:s', time());
+    $date = strtotime($current_date); 
 
-  $active_plan = $in_array[0]["plan"];
-  $plan_end = $in_array[0]["plan_end"]."<br>";
-  $current_date = date('m/d/Y h:i:s', time());
-  $date = strtotime($current_date); 
-
-  if($plan_end > $date){
-    $plan_active = true;
+    if($plan_end > $date){
+      $plan_active = true;
+    }else{
+      $plan_active = false;
+    }
+  }else{
+    $plan_active = false;
   }
 ?>
-@if($paid_courses && $plan_active)
+@if($paid_courses)
 @foreach($course_data as $c_data)
 
 @if($c_data->status == 1 && $c_data->deleted_at == NULL)
-  
+  @if($c_data->subscription_type == "Paid")
   <?php
     $total_subtopic = DB::table("subtopics")->where("course_id",$c_data->course_id)->get();
     $theory_topic = DB::table("theory_read")->where("course_id",$c_data->course_id)->where("user_id",Auth::guard("customer")->user()->id)->get();
@@ -453,17 +459,7 @@ function toogleDataSeries(e){
                 <div class="progress" style="width: {{ $read_percent }}%"></div>
                 <div class="percentage" style="width: 100%">{{ $read_percent }}%</div>  
               </div>
-              <?php
-                $payment_db = DB::table("payments")->get();
-                $payment_db_product = "";
-                foreach ($payment_db as $p_db) {
-                    $payment_db_product = $stripe->invoices->retrieve($p_db->invoice_id, [])->lines['data'][0]->plan->product;
-
-                }
-                
-                
-                
-              ?>
+              
               
                 <div class="btm-infos">
                   <a href="{{ url('/user/course_views') }}/{{ base64_encode($c_data->course_id) }}" class="card-link">View</a>
@@ -488,7 +484,7 @@ function toogleDataSeries(e){
 ?>
 
 @endif
-
+@endif
 @endforeach
 @endif
 </div>

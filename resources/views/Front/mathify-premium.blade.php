@@ -1,6 +1,10 @@
 @extends('Front.layouts.landing_layout')
 @section('title', 'Home')
 
+@section('current_page_js')
+
+@endsection
+
 @section('content')
 <section class="learnworlds-size-normal">
   <div class="container">
@@ -71,52 +75,67 @@ help and resources for HSC maths.  </p>
 get online.</p>
 </div>
 <?php
-  $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-  $product1 = $stripe->products->retrieve('prod_Q64MNNEvhv7i07', []);
+  $stripe = new \Stripe\StripeClient('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');
+  $product1 = $stripe->products->retrieve('prod_Q7MAzTXMC8sHkv', []);
+  
   $price = $stripe->prices->retrieve($product1->default_price, []);
+
   $price_default = $price->unit_amount/100;
 
-  $product2 = $stripe->products->retrieve('prod_Q64NANzl3zhC4s', []);
+  $product2 = $stripe->products->retrieve('prod_Q6X8MuJXVZ6si0', []);
   $price1 = $stripe->prices->retrieve($product2->default_price, []);
+
   $price_default1 = $price1->unit_amount/100;
 
-  $product3 = $stripe->products->retrieve('prod_Q64OVqbEf4P8mq', []);
+  $product3 = $stripe->products->retrieve('prod_Q7MCjVkfGVMr4W', []);
 
   $price2 = $stripe->prices->retrieve($product3->default_price, []);
   $price_default2 = $price2->unit_amount/100;
 
-  $user_email = Auth::guard("customer")->user()->email;
+  $user = Auth::guard("customer")->user();
 
-  $invoices = $stripe->invoices->all();
-  //echo "<pre>";
-  //print_r($invoices);
-  $in_array = array();
-  foreach ($invoices as $key => $in) {
-    if($in->customer_email == $user_email){
-      $payment_db_product = $stripe->invoices->retrieve($in->id, [])->lines['data'][0]->plan->product;
+  if($user){
+    $user_email = Auth::guard("customer")->user()->email;
 
-               
-      $product = $stripe->products->retrieve($payment_db_product, []);
-      
-      array_push($in_array, array("email"=>$in->customer_email,"created"=>$in->created,"plan"=>$product->name,"plan_start"=>$in->lines['data'][0]->period->start,"plan_end"=>$in->lines['data'][0]->period->end));
-      //echo $in->customer_email;
-      
+    $invoices = $stripe->invoices->all();
+    //echo "<pre>";
+    //print_r($invoices);
+    $in_array = array();
+    foreach ($invoices as $key => $in) {
+      if($in->customer_email == $user_email){
+        $payment_db_product = $stripe->invoices->retrieve($in->id, [])->lines['data'][0]->plan->product;
+
+                 
+        $product = $stripe->products->retrieve($payment_db_product, []);
+        
+        array_push($in_array, array("email"=>$in->customer_email,"created"=>$in->created,"plan"=>$product->name,"plan_start"=>$in->lines['data'][0]->period->start,"plan_end"=>$in->lines['data'][0]->period->end));
+        //echo $in->customer_email;
+        
+      }
     }
-  }
-  //print_r($in_array);
-  // foreach ($variable as $key => $value) {
-  //   # code...
-  // }
+    //print_r($in_array);
+    // foreach ($variable as $key => $value) {
+    //   # code...
+    // }
 
 
+    if($in_array){ 
+      $active_plan = $in_array[0]["plan"];
+      $plan_end = $in_array[0]["plan_end"]."<br>";
+      $current_date = date('m/d/Y h:i:s', time());
+      $date = strtotime($current_date); 
 
-  $active_plan = $in_array[0]["plan"];
-  $plan_end = $in_array[0]["plan_end"]."<br>";
-  $current_date = date('m/d/Y h:i:s', time());
-  $date = strtotime($current_date); 
+      if($plan_end > $date){
+        $plan_active = true;
+      }else{
+        $plan_active = false;
+      }
+    }else{
+      $plan_active = false;
+      $active_plan = "";
+    }
 
-  if($plan_end > $date){
-    $plan_active = true;
+    
   }
 ?>
 <style>
@@ -131,35 +150,59 @@ get online.</p>
 }
 </style>
 <div class="col-md-4">
-  <div class="prices-level @if($active_plan == $product1->name && $plan_active) active @endif">
-<h5>{{ $product1->name }}</h5>
-
+  <div class="prices-level @if($user) @if($active_plan == $product1->name && $plan_active) active @endif @endif">
+  @if($price->recurring->interval_count == 1 && $price->recurring->interval == "month")  
+<h5>Monthly Suscription</h5>
+@endif
 <h1>${{ $price_default }}/Month</h1>
 <p>Billed monthly as ${{ $price_default }}</p>
+<?php
+  $user = Auth::guard("customer")->user();
+  $plan_data = array("interval_count"=>$price->recurring->interval_count,"interval"=>$price->recurring->interval,"price_default"=>$price_default);
 
-<a href="https://buy.stripe.com/test_00g2ap3fdfivfT29AD" class="@if($active_plan == $product1->name && $plan_active) subscribe_active @endif">Subscribe</a>
+?>
+@if($user)
+<a href="https://buy.stripe.com/5kAcOB1NJdiobvi4gj" class="@if($active_plan == $product1->name && $plan_active) subscribe_active @endif monthly_subscription" onclick="suscribe_plan('{{ $user->id }}','{{ $user->name }}','{{ $user->email }}','{{ $price->recurring->interval_count }}','{{ $price->recurring->interval }}','{{ $price_default }}')">Purchase Now</a>
+
+@else
+<a href="{{ url('/login') }}">Get started for free</a>
+@endif
+
 </div>  
 </div>
 
 <div class="col-md-4">
-  <div class="prices-level @if($active_plan == $product2->name && $plan_active) active @endif">
-<h5>{{ $product2->name }}</h5>
+  <div class="prices-level @if($user) @if($active_plan == $product2->name && $plan_active) active @endif @endif">
 
+    @if($price1->recurring->interval_count == 6 && $price1->recurring->interval == "month")
+    
+<h5>Bi-Annual Suscription</h5>
+@endif
 <h1>${{ $price_default1 }}/Six Month</h1>
 <p>Billed every 6 months as ${{ $price_default1 }}</p>
 
-<a href="https://buy.stripe.com/test_9AQeXb175fiv7mw3cg" class="@if($active_plan == $product2->name && $plan_active) subscribe_active @endif">Subscribe</a>
+@if($user)
+<a href="https://buy.stripe.com/6oEbKxdwr5PWbvieUY" class="@if($active_plan == $product2->name && $plan_active) subscribe_active @endif" onclick="suscribe_plan('{{ $user->id }}','{{ $user->name }}','{{ $user->email }}','{{ $price1->recurring->interval_count }}','{{ $price1->recurring->interval }}','{{ $price_default1 }}')">Purchase Now</a>
+@else
+<a href="{{ url('/login') }}">Get started for free</a>
+@endif
+
 </div>  
 </div>
 
 <div class="col-md-4">
-  <div class="prices-level @if($active_plan == $product3->name && $plan_active) active @endif">
-<h5>{{ $product3->name }}</h5>
-
+  <div class="prices-level @if($user) @if($active_plan == $product3->name && $plan_active) active @endif @endif">
+    @if($price2->recurring->interval_count == 1 && $price2->recurring->interval == "year")
+<h5>Yearly Suscription</h5>
+@endif
 <h1>${{ $price_default2 }}/Year</h1>
 <p>Billed every 1 Year as ${{ $price_default2 }}</p>
+@if($user)
+<a href="https://buy.stripe.com/6oE3e10JF9280QE7sx" class="@if($active_plan == $product3->name && $plan_active) subscribe_active @endif" onclick="suscribe_plan('{{ $user->id }}','{{ $user->name }}','{{ $user->email }}','{{ $price2->recurring->interval_count }}','{{ $price2->recurring->interval }}','{{ $price_default2 }}')">Purchase Now</a>
+@else
+<a href="{{ url('/login') }}">Get started for free</a>
+@endif
 
-<a href="https://buy.stripe.com/test_cN2g1f1756LZ0Y88wy" class="@if($active_plan == $product3->name && $plan_active) subscribe_active @endif">Subscribe</a>
 </div>  
 </div>
 <!-- <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
@@ -198,4 +241,23 @@ We take the quality of our questions and solutions very seriously. We continuall
 
 
 </section>
+<script type="text/javascript">
+  function suscribe_plan(user_id,user_name,user_email,interval_count,interval,price_default){
+    
+    sessionStorage.setItem("user_id", user_id);
+    sessionStorage.setItem("user_name", user_name);
+    sessionStorage.setItem("user_email", user_email);
+    sessionStorage.setItem("interval_count", interval_count);
+    sessionStorage.setItem("interval", interval);
+    sessionStorage.setItem("price_default", price_default);
+    // $.ajax({
+    //   url: "{{ url('/user/store_data') }}",
+    //   cache: false,
+    //   success: function(html){
+        
+    //   }
+    // });
+  }
+  
+</script>
 @endsection

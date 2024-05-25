@@ -16,10 +16,10 @@
     <div class="col-md-5">
 <div class="get-complet">
   <img src="{{ url('/public') }}/assets1/img/n2.png">
-<p>Get complete online access to our subtopic study guides designed to cover every different type of exam question.  </p>
+<p>Get complete online access to our subtopic study guides, designed to cover every different type of exam question.  </p>
 
 <img src="{{ url('/public') }}/assets1/img/n1.png">
-<p>No more need to write your own notes or scour the internet for past paper questions. We have everything all in one place for your convenience Structured Resources. </p>
+<p>No more need to write your own notes or scour the internet for past paper questions. We have everything all in one place for your convenience with structured resources. </p>
 
 </div>
 </div>
@@ -34,7 +34,7 @@
 
 <div class="col-md-6">
 <div class="subtext">
-<h2> Within in <span>each subtopic </span> students will find: </h2>
+<h2> Within <span>each subtopic </span> students will find: </h2>
 
 </div>
   <div class="d-flex align-items-start develop-sum">
@@ -186,7 +186,7 @@ aria-labelledby="v-pills-profile-tab">...</div>
   <img src="{{ url('/public') }}/assets1/img/object.png">
 <h1> Custom Exam <span> Builder </span><img src="{{ url('/public') }}/assets1/img/wave.png" class="wave-img"> </h1>
 <br>
-<p>Finished working through our course content and looking for more? Our exam builder is designed to provide students more opportunities practicing EXACTLY the topic they need. Simply select the topics you wish to practice, the the difficulty you wish to be examined on, and the length of the quiz before getting started </p>
+<p>Finished working through our course content and looking for more? Our exam builder is designed to provide students more opportunities practicing EXACTLY the topic they need. Simply select the topics you wish to practice, the difficulty you wish to be examined on, and the length of the quiz before getting started </p>
  <img src="{{ url('/public') }}/assets1/img/exam-b.png" class="resour-text">
 </div>
 
@@ -213,7 +213,7 @@ aria-labelledby="v-pills-profile-tab">...</div>
    <div class="col-md-4">
 <div class="box-verl">
 <h5> Performance Analysis</h5>
-<p>We understand that sometimes it’s hard to measure where you’re at or where you should be. That’s whyfor every question completed through our online modules, you’ll find out what percentage of other students in your cohort got the same question correct. You’ll also see how long other students on averagetake!</p>
+<p>We understand that sometimes it’s hard to measure where you’re at or where you should be. That’s why for every question completed through our online modules, you’ll find out what percentage of other students in your cohort got the same question correct. You’ll also see how long other students take on average!</p>
 
 </div>
   </div>
@@ -221,7 +221,7 @@ aria-labelledby="v-pills-profile-tab">...</div>
    <div class="col-md-4">
 <div class="box-verl">
 <h5> Workshops & More</h5>
-<p>We understand that quality live teaching is sometimes irreplacable. Every subscribed member will havetickets to our HSC maths workshops at ZERO extra cost. </p>
+<p>We understand that quality live teaching is sometimes irreplacable. Every subscribed member will receive tickets to our HSC maths workshops at ZERO extra cost. </p>
 
 </div>
   </div>

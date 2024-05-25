@@ -109,7 +109,7 @@ For High Yield Learning</h2>
 
 <div class="col-md-5 theory-box">
 
-<h3>Over 100+ Booklets</h3>
+<h3>Over 100+ Study Booklets</h3>
 
 <div class="booklet-li">
   <ul> 

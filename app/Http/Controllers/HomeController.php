@@ -26,6 +26,11 @@ class HomeController extends Controller
         return view("Front.home")->with($data);
     }
 
+    public function error_page(){
+        $data['courses_data'] = DB::table("courses")->where("status",1)->where("deleted_at",NULL)->orderBy('ordering_id', 'ASC')->get();
+        return view("Front.error_page")->with($data);
+    }
+
     public function courses(){
         $data['courses_data'] = DB::table("courses")->where("status",1)->where("deleted_at",NULL)->orderBy('ordering_id', 'ASC')->get();
         return view("Front.courses")->with($data);
@@ -67,9 +72,8 @@ class HomeController extends Controller
     }
 
     public function register(){
-        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-        $data['stripe'] = $stripe;
-    	return view("Front.register")->with($data);
+        
+    	return view("Front.register");
     }
 
     public function register1(){
@@ -77,6 +81,7 @@ class HomeController extends Controller
     }
 
     public function submit_registration(Request $request){
+       
     	$name = $request->name;
         $email = $request->email;
         $password = $request->password;
@@ -86,6 +91,9 @@ class HomeController extends Controller
         $checkUserEmail = DB::table("users")->where("email",$email)->first();
         //print_r($checkUserEmail);die;
         if(empty($checkUserEmail)){
+            
+           
+      
             $user = new User();
 
             $user->name = $name;
@@ -94,30 +102,42 @@ class HomeController extends Controller
             $user->role = "student";
             $user->subscription_plan = $subscription;
             $user->status = "1";
-            $user_save = $user->save();
-
+           $user_save = $user->save();
+            //$user_save = 8;
+           //echo $email;die;
             if($user_save){
+
+                
+             
+
                 $user_data = array(
                   'email'  => $request->get('email'),
                   'password' => $request->get('password')
                 );
-                try{
-                    $data = array('name'=>"xxxx");
-                Mail::send("Front.registration_email", $data, function($message) {
-                     $message->to('votivephp.neha@gmail.com', 'Tutorials Point')->subject
-                        ('Laravel Basic Testing Mail');
-                     $message->from('votivephp.neha@gmail.com','xxx');
-               });
-                }catch (Exception $ex) {
-    // Debug via $ex->getMessage();
-    return "We've got errors!";
-}
-if(Auth::guard("customer")->attempt($user_data))
+ try {
+   Mail::send('Front.registration_email', ['name' => $name,'email'=>$email], function($message) use($request){
+                $message->to($request->email);
+                $message->from('elearning_three@mathifyhsc.com.au','elearning');
+                $message->subject('Register User');
+            });
+    if(Auth::guard("customer")->attempt($user_data))
                 {
                     
                     return redirect()->route('user_dashboard');
                     
                 }
+} catch (\Exception $e) {
+    if(Auth::guard("customer")->attempt($user_data))
+                {
+                    
+                    return redirect()->route('user_dashboard');
+                    
+                }
+}
+            
+             
+
+
                 
                
                 

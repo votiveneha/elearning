@@ -23,7 +23,7 @@ use Session;
 use DB;
 use Auth;
 use Stripe;
-
+use Mail;
 use App\Models\QuestionBank;
 
 class UserController extends Controller
@@ -57,11 +57,38 @@ class UserController extends Controller
         $data['topics'] = DB::table("topics")->where("course_id",$id)->where("course_id",$id)->orderBy('ordering_id','asc')->get();
         $data['course_title'] = DB::table("courses")->where("course_id",$id)->first();
         $data['user_data'] = DB::table("theory_read")->where("user_id",Auth::guard("customer")->user()->id)->first();
-        $data['course_data'] = DB::table("courses")->orderBy('ordering_id', 'ASC')->get();
+        $data['course_data'] = DB::table("courses")->where("course_id",$id)->orderBy('ordering_id', 'ASC')->get();
         Session::put("course_id",$id);
         //print_r($data['course_title']);die;
 
         return view('Front.course_view1')->with($data);
+    }
+
+    public function cancel_subscription(Request $request){
+        $customer_id = $request->customer_id;
+
+        $get_subscription = DB::table("payments")->where("customer_id",$customer_id)->first();
+
+        $update_payment_status = DB::table('payments')
+                    ->where('customer_id', $request->customer_id)
+                    ->update(['payment_status' => "Cancelled"]);
+
+
+
+        try {
+   Mail::send('Front.subscription_email', ['name' => 'neha','email'=>'votivephp.neha@gmail.com','plan_name'=>'monthly plan'], function($message) use($request){
+                $message->to('votivephp.neha@gmail.com');
+                $message->from('elearning_three@mathifyhsc.com.au','elearning');
+                $message->subject('Cancel Subscription');
+            });
+   return $update_payment_status;
+   
+} catch (\Exception $e) {
+    return $update_payment_status;
+}            
+
+        
+
     }
 
     public function pricing_page(){
@@ -642,19 +669,19 @@ class UserController extends Controller
 
     public function user_status(){
         $data['course_data'] = DB::table("courses")->orderBy('ordering_id', 'ASC')->get();
-        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+        $stripe = new \Stripe\StripeClient("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");
         $data['stripe'] = $stripe;
-        $payment_intents = $stripe->paymentIntents->all();
+        //$payment_intents = $stripe->paymentIntents->all();
         $user_email = Auth::guard('customer')->user()->email;
         //echo $user_email;
-        foreach ($payment_intents as $p_intents) {
-            $customer_data = $stripe->customers->retrieve($p_intents->customer, []);
-            $user_email = Auth::guard('customer')->user()->email;
-            if($user_email == $customer_data->email){
-                //echo $customer_data->email;
-            }
+        // foreach ($payment_intents as $p_intents) {
+        //     $customer_data = $stripe->customers->retrieve($p_intents->customer, []);
+        //     $user_email = Auth::guard('customer')->user()->email;
+        //     if($user_email == $customer_data->email){
+        //         //echo $customer_data->email;
+        //     }
             
-        }
+        // }
 
         // echo "<pre>";
         // print_r($stripe->paymentIntents->all());die;
@@ -746,6 +773,31 @@ class UserController extends Controller
             Session::flash('message', 'Profile Updated Sucessfully!');
             return redirect()->to('/user/user_dashboard');
 
+    }
+
+    public function thankyou(){
+        $data['courses_data'] = DB::table("courses")->where("status",1)->where("deleted_at",NULL)->orderBy('ordering_id', 'ASC')->get();
+        return view("Front.thankyou")->with($data);
+    }
+
+    public function store_data(Request $request){
+        $user_id = $request->user_id;
+        $user_name = $request->user_name;
+        $user_email = $request->user_email;
+        $interval_count = $request->interval_count;
+        $interval = $request->interval;
+        $price_default = $request->price_default;
+
+        $payments = new Payments;
+        $payments->customer_id = $user_id;
+        $payments->customer_name = $user_name;
+        $payments->customer_email = $user_email;
+        $payments->amount = $price_default;
+        $payments->plan_name = $interval_count." ".$interval;
+        $payments->payment_status = "Successful";
+        $payments->save();
+        
+        
     }
 
 

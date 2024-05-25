@@ -1,33 +1,21 @@
-<?php
-  $email_data = Auth::guard("customer")->user();
-  if($email_data){
-    $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-    $invoices = $stripe->invoices->all();
 
-    $user_email = Auth::guard("customer")->user()->email;
-    $payent_data = DB::table("payments")->where("customer_email",$user_email)->get();
-    $p_data = array();
-    foreach ($payent_data as $pay_data) {
-      $p_data[] = $pay_data->pay_id;
-    }
-    foreach ($invoices as $invoice) {
-      if($user_email == $invoice->customer_email){
-        $paymentIntents = $stripe->paymentIntents->retrieve($invoice->payment_intent, []);
-        $amount_paid = number_format((float)$invoice->amount_paid/100, 2, '.', '');
-        
-        if(!in_array($paymentIntents->id, $p_data)){
-          DB::table("payments")->insert([
-            ['customer_id' => $invoice->customer, 'pay_id' => $paymentIntents->id, 'customer_email' => $invoice->customer_email,'amount' => $amount_paid,'invoice_id' => $invoice->id,'payment_status' => $paymentIntents->status,'created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')]
-          ]);
-        }
-        
 
-      }
-    }
-  }
-  // echo "<pre>";
-  // print_r($invoices);
-?>
+<style type="text/css">
+  .purchase_plan_btn a {
+    border: 1px solid #0069d1;
+    text-align: center;
+    padding: 6px 9px !important;
+    border-radius: 5px;
+    color: #FFF;
+    background: #0070d1;
+}
+.purchase_plan_btn a:hover {
+   
+    color: #0070d1 !important;
+    background: #FFF;
+   
+}
+</style>
 <div class="container-fluid">
     <div class="row">
 <div class="col-md-12 admin-profile">
@@ -36,6 +24,9 @@
   <div id="btn02" class="header_toggle" onclick="toggleSidebar()"> <i class='bx bx-chevron-right' id="header-toggle"></i> </div>
  <nav class="navbar">
   <div class="container">
+    <div class="purchase_plan_btn">
+       <a href="{{ url('/user/pricing') }}">Upgrade Plan</a>
+     </div>
    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
      <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,6 +47,7 @@
        ?>
        <!-- <img src="{{ url('/public/assets/img') }}/user2-160x160.jpg"> -->
      </label></div>
+     
      <?php
         $user = Auth::guard("customer")->user();
      ?>
@@ -65,7 +57,7 @@
             <li><a class="dropdown-item" href="{{ url('/user/settings') }}">Profile</a></li>
 
             <li><a class="dropdown-item" href="{{ url('/user/change_password') }}">Change Password</a></li>
-            <li><a class="dropdown-item" href="{{ url('/user/pricing') }}">Purchase Plan</a></li>
+            <li><a class="dropdown-item" href="{{ url('/user/pricing') }}">Upgrade Plan</a></li>
             <li><a class="dropdown-item" href="{{ url('/user/logout') }}">Logout</a></li>
            
           </ul>

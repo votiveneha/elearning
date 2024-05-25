@@ -80,7 +80,7 @@
                   <div class="input-group">
                     <div class="input-group-prepend">
                     </div>
-                    <input type="password" class="form-control" name="password" required="required"
+                    <input type="password" class="form-control" name="password"
                     value="">
                     <br>
                       @if($errors->has("password"))
@@ -99,7 +99,7 @@
                   <div class="input-group">
                     <div class="input-group-prepend">
                     </div>
-                    <input type="password" class="form-control" name="password" required="required"
+                    <input type="password" class="form-control" name="password"
                     value="">
                     <br>
                       @if($errors->has("confirm_pasword"))
@@ -118,7 +118,7 @@
                   <div class="input-group">
                     <div class="input-group-prepend">
                     </div>
-                    <input type="file" class="form-control" name="profile_img" required="required"
+                    <input type="file" class="form-control" name="profile_img"
                     >
                      <?php if(!empty($student_detail[0]->profile_img)){?>
                      <img class="img-responsive" src="{{ url('/public') }}/uploads/{{$student_detail[0]->profile_img}}" width="50px;" alt="profile_img">
@@ -132,19 +132,33 @@
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Courses<span class="mandatory" style="color:red"> *</span></label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                    
+                    <select class="form-select form-control" name="course_id" multiple="">
+                      <option value="">Select Courses</option>
+                      @foreach($course_list as $c_list)
+                        @if($c_list->deleted_at == NULL)
+
+                        <option value="{{ $c_list->course_id }}" @if($id>0) @if($c_list->course_id == $student_detail[0]->course_id) selected @endif @endif>{{ $c_list->title }}</option>
+                        @endif
+                      @endforeach
+                    </select>  
+                  </div>  
+                </div>
+              </div>
+              <!-- /.col -->
+              
+              <!-- /.col -->
             </div>
             <!-- /.row -->
 
        
-              <div class="row">
-             
-              <!-- /.col -->
-              <div class="col-md-6">
               
-              </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
           </div>
            <div class="card-footer">
             <input type="submit" class="btn btn-primary" value="Submit" id="">
