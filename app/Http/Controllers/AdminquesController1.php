@@ -61,6 +61,20 @@ class AdminquesController1 extends Controller{
 		return view("admin.add_questions_bank")->with($data);
 	}
 
+	public function add_questions_bank1(Request $request){
+
+		$chapter_id = base64_decode($request->chapter_id);
+		$data['chapter_id'] = $chapter_id;
+		$data['chapter_data'] = DB::table("subtopics")->where("st_id",$chapter_id)->first();
+		if (isset($_GET['question_type'])) {
+		  $data['question_type'] = $_GET['question_type'];
+		}else{
+		  $data['question_type'] = "";		
+		}
+
+		return view("admin.add_question_bank_new")->with($data);
+	}
+
 	public function uploadMedia(Request $request)
 {
     if ($request->hasFile('upload')) {
@@ -121,6 +135,7 @@ class AdminquesController1 extends Controller{
 
 		$question_title = $request->question_title;
 		$question_exam = $request->question_exam;
+		$question_type = $request->question_type;
 		$course = $request->course;
 		$topics = $request->topics;
 		$chapter = $request->chapter;
@@ -149,6 +164,7 @@ class AdminquesController1 extends Controller{
 			$questions_model->option_id = $i+1; 
 			$questions_model->title = $question_title; 
 			$questions_model->quiz_exam = $question_exam; 
+			$questions_model->question_type = $question_type; 
 			$questions_model->course_id = $course; 
 			$questions_model->topic_id = $topics; 
 			$questions_model->chapter_id = $chapter; 
@@ -174,24 +190,106 @@ class AdminquesController1 extends Controller{
 
 	}
 
+	public function post_questions_bank1(Request $request){
+
+		// echo "<pre>";
+		// dd($request);die;
+		$chapter_id = base64_decode($request->chapter_id);
+            
+
+		$question_title = $request->question_title;
+		$question_exam = $request->question_exam;
+		$question_type = $request->question_type;
+		$course = $request->course;
+		$topics = $request->topics;
+		$chapter = $request->chapter;
+		$answer_explanation = $request->answer_explanation;
+		$options = $request->options;
+		$correct_answer_check = $request->correct_answer_check;
+		$time_length = $request->time_length;
+		$difficulty_level = $request->difficulty_level;
+		$marks = $request->marks;
+
+		$questions_data = QuestionBank::all()->last();
+		//print_r($correct_answer_check);die;
+		if(!empty($questions_data)){
+			$new_q_id = $questions_data->q_id+1;
+		}else{
+			$new_q_id = 1;
+		}
+		
+		$i = 0;
+
+		$question_type = $request->question_type;
+
+		if($question_type == "multipart_questions"){
+			$new_question_title = $request->new_question_title;
+			$multipart_questions_options = $request->multipart_questions_options;
+
+		}else{
+			//print_r($correct_answer_check);die;
+			//echo $correct_answer_check[3];die;
+			foreach($options as $op){
+				$questions_model = new QuestionBank();
+
+				$questions_model->q_id = $new_q_id; 
+				$questions_model->option_id = $i+1; 
+				$questions_model->title = $question_title; 
+				$questions_model->quiz_exam = $question_exam; 
+				$questions_model->question_type = $question_type; 
+				$questions_model->course_id = $course; 
+				$questions_model->topic_id = $topics; 
+				$questions_model->chapter_id = $chapter; 
+				$questions_model->correct_answer_explanation = $answer_explanation; 
+				$questions_model->Options = $op; 
+				$questions_model->correct_answer = $correct_answer_check[$i]; 
+				$questions_model->time_length = $time_length; 
+				$questions_model->difficulty_level = $difficulty_level; 
+				$questions_model->marks = $marks; 
+				
+				$questions_model->save();
+				$i++;
+			}	
+			Session::flash('message', 'Question added successfully');
+			//return route()->redirect("show_questions");
+			if($request->chapter_text == "chapter_text"){
+				return redirect()->to('/admin/show_questions/'.base64_encode($request->chapter));
+			}else{
+
+				return redirect()->to('/admin/show_questions?question_type='.$_GET['question_type']);
+			}
+		}
+
+
+		
+		
+
+	}
+
 	public function show_questions(Request $request){
 		$chapter_id = base64_decode($request->chapter_id);
 		
 		$data['chapter_id'] = $chapter_id;
 		if($chapter_id){
-			$data['questions_data'] = DB::table("question_bank")->where("chapter_id",$chapter_id)->orderBy('ordering_id', 'ASC')
+			$data['questions_data'] = DB::table("question_bank")->where("chapter_id",$chapter_id)
+			 // ->orderBy('ordering_id', 'ASC')
+			->orderBy(DB::raw('ordering_id IS NULL, ordering_id'), 'ASC')
             ->groupBy('q_id')->get();
             $data['add_questions'] = "quiz_exam";
 		}else{
 			
 			if($_GET['question_type'] == "quiz"){
-				$data['questions_data'] = DB::table("question_bank")->where("quiz_exam","Quiz")->orWhere("quiz_exam","Both")->orderBy('ordering_id', 'ASC')
+				$data['questions_data'] = DB::table("question_bank")->where("quiz_exam","Quiz")->orWhere("quiz_exam","Both")
+				// ->orderBy('ordering_id', 'ASC')
+				->orderBy(DB::raw('ordering_id IS NULL, ordering_id'), 'ASC')
             	->groupBy('q_id')->get();
             	$data['add_questions'] = $_GET['question_type'];
 			}
 			if($_GET['question_type'] == "exam_builder"){
 
-				$data['questions_data'] = DB::table("question_bank")->where("quiz_exam","Exam Builder")->orWhere("quiz_exam","Both")->orderBy('ordering_id', 'ASC')
+				$data['questions_data'] = DB::table("question_bank")->where("quiz_exam","Exam Builder")->orWhere("quiz_exam","Both")
+				// ->orderBy('ordering_id', 'ASC')
+				->orderBy(DB::raw('ordering_id IS NULL, ordering_id'), 'ASC')
             	->groupBy('q_id')->get();
             	$data['add_questions'] = $_GET['question_type'];
 			}
@@ -252,6 +350,9 @@ public function post_questions_bank_edit(Request $request){
 		$time_length = $request->time_length;
 		$difficulty_level = $request->difficulty_level;
 		$marks = $request->marks;
+		$course = $request->course;
+		$topics = $request->topics;
+		$chapter = $request->chapter;
 		
 		//print_r($options);die;
 
@@ -269,7 +370,7 @@ public function post_questions_bank_edit(Request $request){
 				$result = DB::table('question_bank')
                     ->where('option_id', $i+1)
                     ->where('q_id', $q_id)
-                    ->update(['title' => $question_title,'quiz_exam' => $question_exam,'correct_answer_explanation' => $answer_explanation,'Options' => $op,'correct_answer' => $correct_answer_check[$i],'time_length' => $time_length,'difficulty_level' => $difficulty_level,'marks' => $marks]);
+                    ->update(['title' => $question_title,'quiz_exam' => $question_exam,'correct_answer_explanation' => $answer_explanation,'Options' => $op,'correct_answer' => $correct_answer_check[$i],'time_length' => $time_length,'difficulty_level' => $difficulty_level,'marks' => $marks,'course_id' => $course,'topic_id' => $topics,'chapter_id' => $chapter]);
                 }else{
                 	$questions_model = new QuestionBank();
 

@@ -1,5 +1,5 @@
 <div id="mySidebar" class="sidebar" style="width: 80px;">
-  <div class="toplogo"> <a href="{{ url('/user/dashboard') }}" class="logo-box"><span class="favi-logo"><img src="{{ url('/public') }}/assets/img/new_logo.png"> </span>
+  <div class="toplogo"> <a href="{{ url('/user/dashboard') }}" class="logo-box"><span class="favi-logo"><img src="{{ url('/public') }}/assets/img/final_logo.png" style="width:130px;"> </span>
   	<!-- <span class="icon-text"><img src="{{ url('/public') }}/assets/img/text-logo.png"></span> -->
   </a>
   
@@ -13,10 +13,10 @@ pie_chart
 grid_view
 </i><span class="icon-text">Courses</span></a><br> -->
 
-<!-- <a href="{{ url('/user/exam_builder') }}"><i class="material-symbols-outlined">
-content_paste_search
-</i><span class="icon-text"></span>Exam Builder</a>
-<br> -->
+<a href="{{ url('/user/full-calender') }}"><i class="material-symbols-outlined">
+calendar_month
+</i><span class="icon-text"></span>User Progress</a>
+<br>
 
 <a href="{{ url('/user/session_history') }}"><i class="material-symbols-outlined">
 history
@@ -28,4 +28,10 @@ history
 <a href="{{ url('/user/settings') }}"><i class="material-symbols-outlined">
 settings
 </i><span class="icon-text"></span>Settings<span></span></a>
+<br>
+<a href="{{ url('/user/exam_builder') }}"><i class="material-symbols-outlined">
+content_paste_search
+</i><span class="icon-text"></span>Exam Builder</a>
+
 </div>
+

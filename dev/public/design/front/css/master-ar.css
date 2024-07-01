@@ -1,0 +1,125 @@
+body.right-to-left {
+    direction: rtl;
+}
+body.right-to-left .navbar-header {
+    float: right;
+}
+
+body.right-to-left .collapse.navbar-collapse {
+    float: left;
+}
+
+body.right-to-left input.ap-submit
+{
+	right: auto !important;
+    left: 0px !important;
+}
+body.right-to-left input.email_app {
+    padding: 8px 10px 8px 56px !important; 
+}
+
+body.right-to-left .chckbox label.check-in{
+	right: 0 !important;
+    left: auto !important;
+}
+body.right-to-left .fieldset .chckbox
+{
+	 float: right !important;
+}
+
+body.right-to-left span.che-condition {
+    margin-left: auto !important;
+    margin-right: 20px !important;
+}
+
+body.right-to-left a.show-list-mode {
+    float: right !important;
+}
+
+body.right-to-left a.show-map-mode {
+    float: right !important;
+}
+
+body.right-to-left .resto-near {
+    float: right !important;
+}
+
+body.right-to-left p.rst-lst-top {
+    float: right !important;
+}
+
+
+body.right-to-left .selected-filter {
+    float: right;
+    width: auto;
+}
+
+
+body.right-to-left .thumb_strip {
+    float: right !important;
+    left: auto !important;
+    right: 0;
+}
+
+body.right-to-left .desc {margin-right: 30px !important;
+margin-left: 0px !important; }
+
+body.right-to-left .time {
+    margin-right: 32px !important;
+    margin-left: 0px !important;
+}
+
+body.right-to-left .strip_list .go_to
+{
+    width: 200px !important;
+    margin: 0px 0px !important;
+    margin-right: 15px !important;	
+}
+
+body.right-to-left a.item_like.item-like-selected
+{
+    float: left !important;	
+}
+
+body.right-to-left .go_to a.btn_1
+{
+ float: right !important;
+}
+
+body.right-to-left a.item_like
+{
+    float: left !important;		
+}
+
+
+body.right-to-left div#restaurant_list th {
+    text-align: right;
+}
+
+body.right-to-left .transactions_hist_l
+{
+ float: right !important;
+}
+
+body.right-to-left .waller_amou {
+    float: right !important;
+}
+
+body.right-to-left .transactions_hist_r{
+    float: left !important;
+}
+
+body.right-to-left span.wl_txt {
+    float: right !important;
+}
+
+
+
+
+
+
+
+
+
+
+

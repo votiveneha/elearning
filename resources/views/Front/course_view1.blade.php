@@ -73,11 +73,20 @@
               @endif
               @if($ch->type == "Quiz")
 
-              <li><a href="{{ url('/user/start_quiz') }}/{{ base64_encode($ch->course_id) }}/{{ base64_encode($ch->topic_id) }}/{{ base64_encode($ch->st_id) }}"><img src="{{ url('/public') }}/assets/img/quiz_img.png">{{ $ch->title }}</a>
+              <li style="display: flex;
+    justify-content: space-between;"><a href="{{ url('/user/start_quiz') }}/{{ base64_encode($ch->course_id) }}/{{ base64_encode($ch->topic_id) }}/{{ base64_encode($ch->st_id) }}"><img src="{{ url('/public') }}/assets/img/quiz_img.png">{{ $ch->title }}</a>
                 <?php
                   $view_button = DB::table("question_analysis")->where("course_id",$ch->course_id)->where("topic_id",$ch->topic_id)->where("chapter_id",$ch->st_id)->where("student_id",Auth::guard("customer")->user()->id)->get();
+
+                  $check_mark_data = DB::table("session_analysis")->where("course_id",$ch->course_id)->where("topic_id",$ch->topic_id)->where("subtopic_id",$ch->st_id)->where("student_id",Auth::guard("customer")->user()->id)->first();
                   //print_r($view_button);
                 ?>
+                @if(!empty($check_mark_data))
+        <div class="sb-checkbox-qz">
+          <input type="checkbox" name="read_check" class="sb-checkbox__input read_check" id="checkeds" checked="">
+          <label class="sb-checkbox__label sb-checkbox__label--green" for="checkeds"></label>
+        </div>
+                  @endif
                 <!-- @if(count($view_button)>0)
                 <a href="{{ url('/user/session_analysis_view') }}/{{ base64_encode($ch->course_id) }}/{{ base64_encode($ch->topic_id) }}/{{ base64_encode($ch->st_id) }}">View Last Result</a>
                 @endif -->
@@ -256,7 +265,7 @@
     $total_subtopic = DB::table("exam_builder")->where("course_id",$c_data->course_id)->where("student_id",Auth::guard('customer')->user()->id)->get();
 
     $total_topic = DB::table("topics")->where("course_id",$c_data->course_id)->get();
-
+    
     $total_sub = array();
     foreach ($total_subtopic as $t_sub) {
       $total_sub[] = $t_sub->topics_id;

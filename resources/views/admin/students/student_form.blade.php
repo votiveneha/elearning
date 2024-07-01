@@ -1,5 +1,17 @@
 @extends('admin.layouts.layout')
 
+@section('current_page_css')
+
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+@endsection
+
+@section('js_bottom')
+
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+
+@endsection
+
 @section('content')
 
 <div class="wrapper">
@@ -132,6 +144,7 @@
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
+              @if($id>0)
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Courses<span class="mandatory" style="color:red"> *</span></label>
@@ -139,7 +152,7 @@
                     <div class="input-group-prepend">
                     </div>
                     
-                    <select class="form-select form-control" name="course_id" multiple="">
+                    <select class="form-select form-control chosen-select" name="course_id" multiple="">
                       <option value="">Select Courses</option>
                       @foreach($course_list as $c_list)
                         @if($c_list->deleted_at == NULL)
@@ -152,6 +165,27 @@
                 </div>
               </div>
               <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Plan<span class="mandatory" style="color:red"> *</span></label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                    </div>
+                    
+                    <select class="form-select form-control " name="plan_name">
+                      <option value="">Select Plan</option>
+                      
+
+                        <option value="1 month">Monthly Plan</option>
+                        <option value="6 month">Biannual Plan</option>
+                        <option value="1 year">Annual Plan</option>
+                      
+                    </select>  
+                  </div>  
+                </div>
+              </div>
+              <!-- /.col -->
+              @endif
               
               <!-- /.col -->
             </div>

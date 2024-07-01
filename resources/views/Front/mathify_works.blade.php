@@ -149,7 +149,7 @@ aria-labelledby="v-pills-profile-tab">...</div>
   <div class="row">
 <div class="col-md-6">
 
-<img src="{{ url('/public') }}/assets1/img/desktop-less.png">
+<img src="{{ url('/public') }}/assets1/img/mathify_worksm.png" style="width:100%">
 </div>
 
 <div class="col-md-6">

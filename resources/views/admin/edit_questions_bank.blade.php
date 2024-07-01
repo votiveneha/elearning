@@ -487,45 +487,64 @@ window.onclick = function(event) {
   }
 }
 
-        // Get the modal
-var modal23 = document.getElementById("myModal_options");
+var textarea_count = $(".option_answer textarea").length;
 
-// Get the button that opens the modal
-var btn23 = document.getElementById("myBtn_options");
+console.log("textarea_count",textarea_count);
 
-// Get the <span> element that closes the modal
-var span2 = document.getElementsByClassName("close_options")[0];
+//var t = 1;
 
-// When the user clicks the button, open the modal 
-btn23.onclick = function() {
-  var editor_value = CKEDITOR.instances['options'].getData();
-  if(editor_value != ""){
-    modal23.style.display = "block";
-  }else{
+for(var t = 1;t<=textarea_count;t++){
+  $(".option_modal_div").append('<div id="myModal_options-'+t+'" class="modal"><div class="modal-content"><span class="close_options close close_options-'+t+'" style="color:black;">×</span><div class="preview_latex_code_options-'+t+'"></div></div></div>');
 
-    $(".preview_latex_error_options").text("Please add the content");
+}
+
+$(".close_options").click(function(){
+  $(".modal").hide();
+});
+
+function getPreview(i){
+  var modal23 = document.getElementById("myModal_options-"+i);
+  //alert(modal23);
+  // Get the button that opens the modal
+  var btn23 = document.getElementById("myBtn_options-"+i);
+
+  // Get the <span> element that closes the modal
+  var span2 = document.getElementsByClassName("close_options")[0];
+
+  // When the user clicks the button, open the modal 
+
+    var editor_value = CKEDITOR.instances["options-"+i].getData();
+    if(editor_value != ""){
+      modal23.style.display = "block";
+      
+      //$("#myModal_options-"+i).show();
+    }else{
+
+      $(".preview_latex_error_options").text("Please add the content");
+    }
+    
+    
+            
+             //var mathml = MathJax.tex2mml(editor_value);
+            //alert(editor_value);
+            $(".preview_latex_code_options-"+i).empty().append("<p>" +editor_value+ "</p>");
+      MathJax.typeset([".preview_latex_code_options-"+i]);
+  
+
+ 
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal23) {
+      modal23.style.display = "none";
+    }
   }
   
-  
-          
-           //var mathml = MathJax.tex2mml(editor_value);
-          //alert(editor_value);
-          $(".preview_latex_code_options").empty().append("<p>" +editor_value+ "</p>");
-    MathJax.typeset([".preview_latex_code_options"]);
 }
 
-// When the user clicks on <span> (x), close the modal
-span2.onclick = function() {
-  
-  modal23.style.display = "none";
-}
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal23) {
-    modal23.style.display = "none";
-  }
-}
+
+
 
 $(function () {
     
@@ -775,7 +794,7 @@ $(function() {
               
               
               
-              <div class="col-md-4">
+             <!--  <div class="col-md-4">
                 <div class="form-group">
                   <label>Course</label>
                   <div class="input-group">
@@ -786,21 +805,82 @@ $(function() {
                     
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="col-md-4">
+                <div class="form-group">
+                  <?php
+                    $course1 = DB::table("courses")->where("course_id",$question_details->course_id)->first();
+                  ?>
+                  <label>Select Course</label>
+                  <div class="input-group">
+                    <?php
+                      $course = DB::table("courses")->get();
+                    ?>
+                    <select class="form-control" name="course" id="course-dropdown">
+                      <option value="">Select Course</option>
+                      @foreach($course as $cors)
+                      <option value="{{ $cors->course_id }}" @if($course1->course_id == $cors->course_id) selected @endif>{{ $cors->title }}</option>
+                      @endforeach
+                      
+                    </select>
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-4">
                 <div class="form-group">
                   <label>Topics</label>
                   <div class="input-group">
                     <?php
                       $topics = DB::table("topics")->where("topic_id",$question_details->topic_id)->first();
                     ?>
-                    <input type="text" class="form-control" name="topics" value="{{ $topics->title }}" readonly="">
+                    <input type="text" class="form-control" name="topics" value="{{ $topics->title }}">
+                    
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Select Topics</label>
+                  <div class="input-group">
+                    <?php
+                      $topics = DB::table("topics")->where("course_id",$course1->course_id)->get();
+                      $topics1 = DB::table("topics")->where("topic_id",$question_details->topic_id)->first();
+
+                    ?>
+                    <select class="form-control" name="topics" id="topic-dropdown">
+                      <option value="">Select Topics</option>
+                      @foreach($topics as $ts)
+                      <option value="{{ $ts->topic_id }}" @if($ts->topic_id == $topics1->topic_id) selected @endif>{{ $ts->title }}</option>
+                      @endforeach
+                      
+                    </select>
                     
                   </div>
                 </div>
               </div>
               @if(!empty($chapter_data))
               <div class="col-md-4 chapter-dropdown">
+                <div class="form-group">
+                  <label>Select Chapter</label>
+                  <div class="input-group">
+                    <?php
+                      $chapters = DB::table("subtopics")->where("topic_id",$topics1->topic_id)->get();
+                      $chapter = DB::table("subtopics")->where("st_id",$chapter_data->st_id)->first();
+                    ?>
+                    <select class="form-control" name="chapter" id="subtopic-dropdown">
+                      <option value="">Select Chapters</option>
+                      @foreach($chapters as $ch)
+                      <option value="{{ $ch->st_id }}" @if($chapter->st_id == $ch->st_id) selected @endif>{{ $ch->title }}</option>
+                      @endforeach
+                      
+                    </select>
+                    
+                  </div>
+                  
+                </div>
+              </div>  
+              <!-- <div class="col-md-4 chapter-dropdown">
                 <div class="form-group">
                   <label>Chapter</label>
                   <div class="input-group">
@@ -812,7 +892,7 @@ $(function() {
                   </div>
                   
                 </div>
-              </div>
+              </div> -->
               @endif
               <div class="col-md-4">
                 <div class="form-group">
@@ -868,10 +948,11 @@ $(function() {
                       $i = 1;
                     ?>
                     @foreach($options as $op)
+                    <input type="hidden" class="op_number-{{ $i }}" name="op_number" value="{{ $i }}" />
                     <input type="hidden" name="correct_answer_check[]" value="{{ $op->correct_answer }}" />
                     <input type="checkbox" name="correct_answer_check[]" class="check" value="incorrect" @if($op->correct_answer == "correct") checked @endif> Correct Answer<br>
                     <textarea name="options[]" class="materialize-textarea options_textarea" id="options-{{ $i }}" col="10">{!! $op->Options !!}</textarea><br>
-                    <button type="button" class="btn btn-primary" id="myBtn_options">Preview Latex</button><br>
+                    <button type="button" class="btn btn-primary getPreview" id="myBtn_options-{{ $i }}" onclick="getPreview('{{ $i }}')">Preview Latex</button><br>
                     <div class="preview_latex_error_options" style="color:red"></div>
                     <?php $i++; ?>
                     @endforeach

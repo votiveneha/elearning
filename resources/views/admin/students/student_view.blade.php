@@ -2,6 +2,7 @@
 
 @section('current_page_css')
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
 <style type="text/css">
   #toast-container > div{
     width:311px;
@@ -11,6 +12,7 @@
 
 @section('js_bottom')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
 <script type="text/javascript">
   $(".remove_courses").click(function(){
     var customer_id = $(".student_id").val();
@@ -171,7 +173,11 @@
           
         </form>
          <div class="card-footer">
-            @if($student_detail[0]->course_id != NULL)
+            <?php
+              $get_subscription = DB::table("payments")->where("customer_id",$id)->first();
+
+            ?>
+            @if(!empty($get_subscription))
             <input type="button"   class="btn btn-primary remove_courses" value="Remove from courses"  />
             @endif
           </div>

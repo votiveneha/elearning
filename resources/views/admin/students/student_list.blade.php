@@ -69,12 +69,13 @@
                     <th>Email</th>
                     <th>Status</th>
                     <th>Action</th>
+                    <th>Another Action</th>
                   </tr>
                   </thead>
                   <tbody>
                   <?php $i=1; ?>
                   @foreach ($student_list as $list)
-
+                  @if($list->email_verification_status == 1)
                   <tr>
                     <td>{{$i}}</td>
                     <td>{{ $list->name }} </td>
@@ -89,8 +90,39 @@
                       <a href="{{ url('/admin/student-form/') }}/{{ base64_encode($list->id) }}"><i class="fa fa-edit"></i></a>
                       <a href="{{ route('student.delete', base64_encode($list->id)) }}" onclick="return confirm('Are you sure you want to delete this record?')"><i class="fa fa-trash"></i></a>
                     </td>
+                    <td>
+                      <a href="{{ route('student_history', base64_encode($list->id)) }}" class="btn btn-success">Test History</a>
+                    </td>
                   </tr>
                   <?php $i++; ?>
+                  @else
+                  <?php
+                    $date1 = "2024-06-11";
+                    $date = $list->created_at;
+                    $date2 = date("Y-m-d", strtotime($date));
+                  ?>
+                  @if($date2<$date1)
+                  <tr>
+                    <td>{{$i}}</td>
+                    <td>{{ $list->name }} </td>
+                    <td>{{$list->email}}</td>
+                     <td>
+                    <input data-id="{{$list->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $list->status ? 'checked' : '' }}>
+                    </td>
+                    
+                    <td>
+                      <a href="{{ route('student.view', base64_encode($list->id)) }}"><i class="fa fa-eye"></i></a>
+
+                      <a href="{{ url('/admin/student-form/') }}/{{ base64_encode($list->id) }}"><i class="fa fa-edit"></i></a>
+                      <a href="{{ route('student.delete', base64_encode($list->id)) }}" onclick="return confirm('Are you sure you want to delete this record?')"><i class="fa fa-trash"></i></a>
+                    </td>
+                    <td>
+                      <a href="{{ route('student_history', base64_encode($list->id)) }}" class="btn btn-success">Test History</a>
+                    </td>
+                  </tr>
+                  <?php $i++; ?>
+                  @endif
+                  @endif
                   @endforeach            
                   </tbody>
                 </table>

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="google-site-verification" content="kQjGiWUcL71jKLnKLNR3Vv1u9h929jJqR-QEj1h6uG4" />
   
   
   @if($_SERVER['REQUEST_URI'] == "/")
@@ -64,8 +65,8 @@
   <link href="{{ url('/public') }}/assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{{ url('/public') }}/assets1/css/style.css" rel="stylesheet">
-
+  <link href="{{ url('/public') }}/assets1/css/style_new.css" rel="stylesheet">
+@yield('current_page_css')
 </head>
 
 <body>

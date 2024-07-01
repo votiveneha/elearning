@@ -75,7 +75,7 @@
           </li> 
           <li class="nav-item">
             <a href="{{ url('/admin/exam_builder_management') }}?question_type=exam_builder" class="nav-link">
-              <i class="nav-icon fas fa-book-open"></i>
+              <i class="nav-icon fa fa-list-alt"></i>
               <p>
                 Exam Builder Management
               </p>
@@ -83,9 +83,17 @@
           </li> 
           <li class="nav-item">
             <a href="{{ url('/admin/payment_details') }}" class="nav-link">
-              <i class="nav-icon fas fa-book-open"></i>
+              <i class="nav-icon fa fa-list-alt"></i>
               <p>
                 Payment Management
+              </p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="{{ url('/admin/edit_email_management') }}" class="nav-link">
+              <i class="nav-icon fas fa-book-open"></i>
+              <p>
+                Email Content Management
               </p>
             </a>
           </li> 

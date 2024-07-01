@@ -1,6 +1,86 @@
  @extends('Front.layouts.layout')
 @section('title', 'Quiz')
 
+@section("current_page_css")
+<style type="text/css">
+  .BlockUIConfirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+}
+
+.blockui-mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.4;
+}
+
+.RowDialogBody {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  opacity: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.RowDialogBody > div:not(.confirm-body) {
+  padding: 8px 10px;
+}
+
+.confirm-header {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+.row-dialog-hdr-success {
+  border-top: 4px solid #2571d6;
+  border-bottom: 1px solid transparent;
+}
+
+.row-dialog-hdr-info {
+  border-top: 4px solid #5bc0de;
+  border-bottom: 1px solid transparent;
+}
+
+.confirm-body {
+  border-top: 1px solid #ccc;
+  padding:20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.confirm-btn-panel {
+  width: 100%;
+}
+.row-dialog-btn {
+  cursor: pointer;
+}
+
+.btn-naked {
+  background-color: transparent;
+}
+
+.quiz_accept_btn{
+  background-color: #2571d6;
+  border-color: #2571d6;
+}
+
+</style>
+@endsection
+
 @section("current_page_js")
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
 
@@ -82,6 +162,7 @@
 
   <?php
     if($subtopic_data->timer != "Not Timed"){
+      if($subtopic_data->timer != ""){
       ?>
   var timer2 = "<?php echo $timer; ?>";
   console.log("timer2",timer2);
@@ -167,6 +248,80 @@
   }, 1000);
   //clearInterval(interval);
    <?php
+     }else{
+      ?>
+      var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var time_value = getCookie("quiz_time-"+"<?php echo $st_id; ?>");
+        
+        
+        
+          if(time_value){
+          
+            var totalSeconds = time_value;
+            
+          }else{
+            var get_timer = "<?php echo $get_timer; ?>";
+            var time_min = parseInt(get_timer/60);
+            var time_sec = parseInt(get_timer%60);
+            var digit_count = time_sec.toString().length;
+            if(digit_count < 2){
+              time_sec1 = "0"+time_sec;
+            }else{
+              time_sec1 = time_sec;
+            }
+            
+            if(get_timer){
+              var totalSeconds = get_timer;
+            }else{
+              var totalSeconds = 0;
+            }
+            
+          }
+        
+          
+        
+        
+        var not_timed = setInterval(setTime, 1000);
+
+        function setTime() {
+          ++totalSeconds;
+          secondsLabel.innerHTML = pad(totalSeconds % 60);
+          minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+          var min = $("#minutes").text();
+          var sec = $("#seconds").text();
+          localStorage.setItem("quiz_time-"+"<?php echo $st_id; ?>", totalSeconds);
+          var now = new Date();
+          var minutes = 120;
+          $(".timer1").val(totalSeconds);
+          now.setTime(now.getTime() + (minutes * 60 * 1000));
+          document.cookie="quiz_time-"+"<?php echo $st_id; ?>"+"="+totalSeconds;  
+          document.cookie = "expires=" + now.toUTCString() + ";"
+          //var timer1 = $(".timer1").val();
+          //$(".ans_time-1").val(totalSeconds);
+          $.ajax({
+            type: "post",
+            url: "{{ url('/user/save_timer') }}",
+            data: {"reference_id":"{{ $reference_id }}","timer_value":totalSeconds,"_token":"{{ csrf_token() }}"},
+            cache: false,
+            success: function(data){
+               // if(data == 1){
+               //   window.location.href = "{{ url('/user/session_analysis') }}/{{ base64_encode($course_id) }}/{{ base64_encode($topic_id) }}/{{ base64_encode($st_id) }}";
+               // }
+            }
+          });
+        }
+
+        function pad(val) {
+          var valString = val + "";
+          if (valString.length < 2) {
+            return "0" + valString;
+          } else {
+            return valString;
+          }
+        }
+      <?php
+     }
     }else{
       ?>
         var minutesLabel = document.getElementById("minutes");
@@ -198,7 +353,7 @@
             
           }
         
-       
+          
         
         
         var not_timed = setInterval(setTime, 1000);
@@ -270,7 +425,8 @@
     //alert(i);
     var total_div = $('.qustion-box-one').length;
     if(i == total_div){
-      $(".next-btn").removeAttr("onclick");
+      //$(".next-btn").removeAttr("onclick");
+      
     }else{
       var next_box = i+1;
       $(".qustion-box-one").hide();
@@ -310,11 +466,12 @@
     var total_time = $(".timer").val();
     var ans_time = $(".ans_time-"+i).val();
     var question_no = $(".question_no-"+i).val();
+    var question_ordering_id = $(".question_ordering_id-"+i).val();
     //alert(ans_time);
     $.ajax({
       type: "post",
       url: "{{ url('/user/submit_question_answer') }}",
-      data: {"question_no":question_no,"q_id":q_id,"answer_val1":answer_val1,"reference_id":'{{ $reference_id }}',"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":total_time,"ans_time":ans_time,"_token":"{{ csrf_token() }}"},
+      data: {"question_no":question_no,"q_id":q_id,"answer_val1":answer_val1,"reference_id":'{{ $reference_id }}',"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":total_time,"ans_time":ans_time,"question_ordering_id":question_ordering_id,"_token":"{{ csrf_token() }}"},
       cache: false,
       success: function(data){
          // if(data == 1){
@@ -361,10 +518,7 @@
 
     
 
-    if(total_div == (i+1)){
-      $(".next-btn-"+(i+1)).removeAttr("onclick");
-      //$(".submit-btn").attr("onclick","submit_quiz1()");
-    }
+    
 
     
     window.history.replaceState(null, null, "?question="+(i+1));
@@ -469,10 +623,11 @@
     var subtopic_id = "<?php echo $st_id; ?>";
     var ans_time = $(".ans_time-"+total_div).val();
     var question_no = $(".question_no-"+total_div).val();
+    var question_ordering_id = $(".question_ordering_id-"+total_div).val();
     $.ajax({
       type: "post",
       url: "{{ url('/user/submit_quiz') }}",
-      data: {"question_no":question_no,"q_id":q_id,"answer_val1":answer_val1,"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":time_spent,"ans_time":ans_time,"_token":"{{ csrf_token() }}"},
+      data: {"question_no":question_no,"q_id":q_id,"answer_val1":answer_val1,"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":time_spent,"ans_time":ans_time,"question_ordering_id":question_ordering_id,"_token":"{{ csrf_token() }}"},
       cache: false,
       success: function(data){
           
@@ -547,6 +702,10 @@
     // Return null if not found
     return null;
 }
+function ConfirmForm() {
+  //clearInterval(not_timed);
+  $("#BlockUIConfirm").show();
+}
 
  
 </script>
@@ -561,7 +720,12 @@
       <div class="d-flex justify-content-between align-content-center func-tn">
         <h5 class="funt-far">{{ $topic_name }}</h5>
         @if($subtopic_data->timer != "Not Timed")
+        @if($subtopic_data->timer != "")
         <p class="m-0 fiv-con"><i class='bx bx-time-five'></i><span class="countdown"></span></p>
+        @else
+        <p class="m-0 fiv-con"><i class='bx bx-time-five'></i><span id="minutes">00</span>:<span id="seconds">00</span></p>
+        @endif
+        
         @else
           <p class="m-0 fiv-con"><i class='bx bx-time-five'></i><span id="minutes">00</span>:<span id="seconds">00</span></p>
           
@@ -590,6 +754,7 @@
         <input type="hidden" name="question_no" class="question_no-{{ $i }}" value="{{ $i }}">
         <input type="hidden" name="question_id" class="question_id-{{ $i }}" value="{{ $qu->q_id }}">
         <input type="hidden" name="ans_time" class="ans_time ans_time-{{ $i }}" value="">
+        <input type="hidden" name="question_ordering_id" class="question_ordering_id-{{ $i }}" value="{{ $qu->ordering_id }}">
         <div class="question_marks_title">
         <h6 class="tp-q">Question {{ $i }}</h6>
           @if($qu->marks <= 1)
@@ -636,9 +801,15 @@
          <input type="radio" id="cat4" name="animal" value="" />
 <label for="cat4"><span>4</span>  lorem acc actual expoumd bla bla</label>
 </div> -->   
+
 <div class="nex-pre-btn">
 <a style="cursor: pointer;" class="pre-btn" onclick="prev_btn({{ $i }})"> Previous</a>
-<a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="next_btn({{$i }},{{ $qu->q_id }})"> Next</a>
+@if($loop->count == $i)
+  <a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="ConfirmForm();"> Submit</a>
+@else  
+  <a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="next_btn({{$i }},{{ $qu->q_id }})"> Next</a>
+@endif
+
 </div>
 
 
@@ -750,7 +921,7 @@
                <a href="#" class="not-atempt">10</a> -->
                
 </div>
-<center><a href="#" class="submit-btn" onclick="submit_quiz1()"> Submit</a></center>
+<center><a href="#" class="submit-btn" onclick="ConfirmForm()"> Submit</a></center>
 <div class="quite_btn"><center><a href="{{ url('user/dashboard') }}" class="qt-btn"> Quit Exam</a></center></div>
 
          </div>
@@ -766,5 +937,22 @@
 <br><br>
 
 </div>
+<div id="BlockUIConfirm" class="BlockUIConfirm" style="display: none;">
+  <div class="blockui-mask"></div>
+    <div class="RowDialogBody">
+      <div class="confirm-header row-dialog-hdr-success">
+        Submit Quiz
+      </div>
+      <div class="confirm-body">
+        Do you want to submit the test?
+      </div>
+      <div class="confirm-btn-panel pull-right">
+        <div class="btn-holder pull-right">
+          <input type="submit" class="row-dialog-btn btn btn-success quiz_accept_btn" value="Yes" onclick="submit_quiz1()" />
+          <input type="button" class="row-dialog-btn btn btn-naked" value="No" onclick="$('#BlockUIConfirm').hide();" />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 @endsection

@@ -4,14 +4,26 @@
 
 @section('current_page_js')
 <script type="text/javascript">
-  function resumeTest(course_id,topic_id,chapter_id,reference_id){
+  function resumeTest(quiz_type,course_id,topic_id,chapter_id,reference_id){
 
-    window.location.href = "{{ url('/user/quiz/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?question=1&&reference_id="+reference_id;
+    if(quiz_type == "exam_builder"){
+      window.location.href = "{{ url('/user/quiz/') }}/"+reference_id;
+    }else{
+      window.location.href = "{{ url('/user/quiz/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?question=1&&reference_id="+reference_id;
+    }
+
+    
     //window.open("{{ url('/user/quiz/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?question=1&&reference_id="+reference_id);
   }
-  function testResult(course_id,topic_id,chapter_id,reference_id){
+  function testResult(quiz_type,course_id,topic_id,chapter_id,reference_id){
 
-    window.location.href = "{{ url('/user/session_analysis/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?reference_id="+reference_id;
+    if(quiz_type == "exam_builder"){
+      window.location.href = "{{ url('/user/session_analysis/') }}/"+reference_id;
+    }else{
+      window.location.href = "{{ url('/user/session_analysis/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?reference_id="+reference_id;
+    }
+
+    
     //window.open("{{ url('/user/session_analysis/') }}/"+course_id+"/"+topic_id+"/"+chapter_id+"?reference_id="+reference_id);
   }
   jQuery($ => {  
@@ -165,26 +177,80 @@ li {
     @foreach($session_history as $session_his)
 
     <?php
-      $total_question = DB::table("question_bank")->where("chapter_id",$session_his->chapter_id)->groupBy('q_id')->get();
+      
+      
+      if($session_his->quiz_type == "exam_builder"){
+        
+
+        $exam_builder = DB::table("exam_builder")->where("reference_id",$session_his->reference_id)->first();
+
+        $total_question = $exam_builder->total_questions;
+
+        $exam_builder_topics = $exam_builder->topics_id;
+        $topic_ids = explode(",",$exam_builder_topics);
+        $topics_array = array();
+        $question_array = array();
+        $question_count_sum = 0;
+        foreach ($topic_ids as $t_ids) {
+          $topic = DB::table("topics")->where("topic_id",$t_ids)->first();
+          $topics_array[] = $topic->title;
+          $question = DB::table("question_bank")->where("topic_id",$t_ids)->groupBy("q_id")->get();
+          
+        }
+
+        $topics_title = implode(",",$topics_array);
+        $quiz_type = "Exam Builder";
+
+
+        $attempted_question = DB::table("question_analysis")->where("student_id",Auth::guard("customer")->user()->id)->where("student_answer","!=",NULL)->where("reference_id",$session_his->reference_id)->groupBy('question_id')->get();
+
+        $date=date_create($session_his->created_at);
+        
+        //echo $session_his->created_at;
+        if($total_question != NULL){
+          $session_progress = count($attempted_question)/$total_question*100;
+        }else{
+          $session_progress = 0;
+        }
+        
+        $course = DB::table("courses")->where("course_id",$session_his->course_id)->first();
+
+        $topic = DB::table("topics")->where("topic_id",$session_his->topic_id)->first();
+        
+
+        
+      }else{
+        $topic = DB::table("topics")->where("topic_id",$session_his->topic_id)->first();
+        $topics_title = $topic->title;
+        $quiz_type = "Quiz";
+        $total_question_quiz = DB::table("question_bank")->where("chapter_id",$session_his->chapter_id)->groupBy('q_id')->get();
+
+        $total_question = count($total_question_quiz);
 
       $attempted_question = DB::table("question_analysis")->where("student_id",Auth::guard("customer")->user()->id)->where("student_answer","!=",NULL)->where("reference_id",$session_his->reference_id)->groupBy('question_id')->get();
 
       $date=date_create($session_his->created_at);
       
       //echo $session_his->created_at;
-      $session_progress = count($attempted_question)/count($total_question)*100;
+
+      $session_progress = count($attempted_question)/$total_question*100;
       
       $course = DB::table("courses")->where("course_id",$session_his->course_id)->first();
 
-      $topic = DB::table("topics")->where("topic_id",$session_his->topic_id)->first();
+      }
+      
+      
 
     ?>
-    <div class="content">
+    @if($total_question != NULL)
+    <div class="content" >
     <div class="box-senvb">
    <h4>{{ date_format($date,"M d, Y") }}</h4>
 </div>
 <div class="accordion-list">
-  <p><strong>{{ $course->title }}:  </strong> {{ $topic->title }}</p>
+  <p><strong>({{ $quiz_type }}) {{ $course->title }}:  </strong> 
+    {{ $topics_title }}
+  </p>
     <div class="d-flex justify-content-between align-items-center resime-box">
   <span class="material-symbols-outlined">
 more_time
@@ -195,21 +261,22 @@ more_time
   
 ?>
 <div class="progress" style="height:15px; width: 80%;">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-       style="width:@if($test_status_data) 100% @else {{ $session_progress }}% @endif ;@if($test_status_data) background-color: green !important; @endif"
+
+  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-info"
+       style="width:@if($test_status_data) @if($session_progress < 100) {{ $session_progress }}% @else 100% @endif @else {{ $session_progress }}% @endif ;@if($test_status_data) @if($session_progress < 100) background-color:  #d9534f !important;  {{ $session_progress }}% @else background-color: green !important; @endif  @endif"
        role="progressbar"
        aria-valuenow="90"
        aria-valuemin="0"
        aria-valuemax="100"> </div> 
 </div>
-<p> <?php echo count($attempted_question); ?>/<?php echo count($total_question); ?> 
+<p> <?php echo count($attempted_question); ?>/<?php echo $total_question; ?> 
 
 @if($test_status_data)
-<button type="button" class="resume-btn" onclick="testResult('{{ base64_encode($session_his->course_id) }}','{{ base64_encode($session_his->topic_id) }}','{{ base64_encode($session_his->chapter_id) }}','{{ base64_encode($session_his->reference_id) }}')">
+<button type="button" class="resume-btn" onclick="testResult('{{ $session_his->quiz_type }}','{{ base64_encode($session_his->course_id) }}','{{ base64_encode($session_his->topic_id) }}','{{ base64_encode($session_his->chapter_id) }}','{{ base64_encode($session_his->reference_id) }}')">
 Complete
 </button>
 @else
-<button type="button" class="resume-btn" onclick="resumeTest('{{ base64_encode($session_his->course_id) }}','{{ base64_encode($session_his->topic_id) }}','{{ base64_encode($session_his->chapter_id) }}','{{ base64_encode($session_his->reference_id) }}')">
+<button type="button" class="resume-btn" onclick="resumeTest('{{ $session_his->quiz_type }}','{{ base64_encode($session_his->course_id) }}','{{ base64_encode($session_his->topic_id) }}','{{ base64_encode($session_his->chapter_id) }}','{{ base64_encode($session_his->reference_id) }}')">
 Resume
 </button>
 @endif
@@ -223,6 +290,7 @@ Resume
 <?php
   $i++;
 ?>
+@endif
 @endforeach
  
 

@@ -147,7 +147,9 @@ window.onclick = function(event) {
                                       <?php $i=1; ?>
 
                   @foreach ($topic_list as $list)
+
                   <tr class="chaptertableRow" data-st_id="{{ $list->st_id }}">
+                    <input type="hidden" name="ordering_list" value="{{ $list->ordering_id }}">
                     <td class="serial-number"> {{ $i }}</td>
                     <td>{{ $list->title }}</td>
                     <td>{{ $list->course_title }}</td>

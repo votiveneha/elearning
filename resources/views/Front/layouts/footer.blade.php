@@ -56,7 +56,7 @@
 	</ul>
     <div class="contact_support">
     	<h4>Contact Support</h4>
-    	<p><a style="color:black" href="mailto:sales@mathifyhsc.com.au">sales@mathifyhsc.com.au</a></p>
+    	<p><a style="color:black" href="mailto:sales@mathifyhsc.com.au">support@mathifyhsc.com.au</a></p>
     </div>		
 </div>
 <script src="https://mathifyhsc.com/dev/public/assets/js/demo.js"></script>

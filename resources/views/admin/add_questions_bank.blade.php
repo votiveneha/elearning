@@ -99,6 +99,13 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
 
 <script>
+        $("#question-type-dropdown").change(function(){
+          var question_type = $(this).val();
+
+          if(question_type == "multipart_questions"){
+            $(".multipart_questions_div").show();
+          }
+        });
         //$('textarea[name="DSC"]').ckeditor();
         CKEDITOR.replace('question_content', {
         
@@ -146,6 +153,101 @@
         //extraPlugins:'mathjax',
            mathJaxLib : 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML'
         });
+
+        CKEDITOR.replace('question_multipart_content', {
+        
+            toolbarGroups: [
+        
+       {
+          "name": "basicstyles",
+          "groups": ["basicstyles"]
+        },
+        {
+          "name": "links",
+          "groups": ["links"]
+        },
+        {
+          "name": "paragraph",
+          "groups": ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph', 'justify']
+        },
+        {
+          "name": "document",
+          "groups": ["mode"]
+        },
+        {
+          "name": "insert",
+          "groups": ['Image', 'Table']
+        },
+        {
+          "name": "styles",
+          "groups": ["styles"]
+        },
+        {
+          "name": "about",
+          "groups": ["about"]
+        }
+        
+      ],
+      extraAllowedContent: 'h3{clear};h2{line-height};h2 h3{margin-left,margin-top}',
+
+      // Adding drag and drop image upload.
+      
+      
+      filebrowserUploadUrl: "{{ route('admin.question.uploadMedia', ['_token' => csrf_token()]) }}",
+      filebrowserUploadMethod: 'form',
+      removeDialogTabs: 'image:advanced;link:advanced',
+      // Remove the redundant buttons from toolbar groups defined 
+        //extraPlugins:'mathjax',
+           mathJaxLib : 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML'
+        });
+
+        CKEDITOR.replace('multipart_questions_options', {
+        
+            toolbarGroups: [
+        
+       {
+          "name": "basicstyles",
+          "groups": ["basicstyles"]
+        },
+        {
+          "name": "links",
+          "groups": ["links"]
+        },
+        {
+          "name": "paragraph",
+          "groups": ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph', 'justify']
+        },
+        {
+          "name": "document",
+          "groups": ["mode"]
+        },
+        {
+          "name": "insert",
+          "groups": ['Image', 'Table']
+        },
+        {
+          "name": "styles",
+          "groups": ["styles"]
+        },
+        {
+          "name": "about",
+          "groups": ["about"]
+        }
+        
+      ],
+      extraAllowedContent: 'h3{clear};h2{line-height};h2 h3{margin-left,margin-top}',
+
+      // Adding drag and drop image upload.
+      
+      
+      filebrowserUploadUrl: "{{ route('admin.question.uploadMedia', ['_token' => csrf_token()]) }}",
+      filebrowserUploadMethod: 'form',
+      removeDialogTabs: 'image:advanced;link:advanced',
+      // Remove the redundant buttons from toolbar groups defined 
+        //extraPlugins:'mathjax',
+           mathJaxLib : 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML'
+        });
+
         CKEDITOR.replace('answer_explanation', {
         
             toolbarGroups: [
@@ -712,6 +814,7 @@ $(function() {
                   <div class="preview_latex_error" style="color:red"></div>
                 </div>
               </div>
+
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Questions available in:</label>
@@ -765,6 +868,54 @@ $(function() {
                     </div><br><br>
                   @endif 
                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12" style="display: none;">
+                <div class="form-group">
+                  <label>Select Question Type</label>
+                  <div class="input-group">
+                    <select class="form-control" name="question_type" id="question-type-dropdown">
+                      <option value="">Select Question Type</option>
+                      
+                      <option value="single_questions">Single Questions</option>
+                      <option value="multipart_questions">Multipart Questions</option>
+                    </select>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="multipart_questions_div" style="display: none;">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Question Content</label>
+                    <div class="input-group">
+                      <textarea name="new_question_title" class="materialize-textarea" id="question_multipart_content"></textarea>
+                    </div><br>
+                    
+                    <div class="preview_latex_button">
+                      <button type="button" class="btn btn-primary" id="myBtn">Preview Latex</button>
+                    </div>
+                    <div class="preview_latex_button">
+                      <button type="button" class="btn btn-primary" id="myBtn">Add Questions</button>
+                    </div>
+                    <div class="preview_latex_error" style="color:red"></div>
+                  </div>
+                </div>
+                 <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Options</label>
+                    <div class="input-group">
+                      <textarea name="multipart_questions_options" class="materialize-textarea" id="multipart_questions_options"></textarea>
+                    </div><br>
+                    
+                    <div class="preview_latex_button">
+                      <button type="button" class="btn btn-primary" id="myBtn">Preview Latex</button>
+                    </div>
+                    <div class="preview_latex_button">
+                      <button type="button" class="btn btn-primary" id="myBtn">Add Options</button>
+                    </div>
+                    <div class="preview_latex_error" style="color:red"></div>
                   </div>
                 </div>
               </div>

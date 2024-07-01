@@ -41,7 +41,8 @@
   var correct_answer = $(".correct_answer").val();
   var correct_ans = correct_answer/"<?php echo $session_analysis1->total_questions; ?>";
   console.log("correct_answer",correct_ans.toFixed(2));
-  $(".correct_answer_session").html(correct_ans.toFixed(2)*100+"%");
+  var correct_ans1 = correct_ans*100;
+  $(".correct_answer_session").html(correct_ans1.toFixed(2)+"%");
   // $(".label_incorrect").show();
   // $(".label_incorrect").siblings().remove();
   var questions_length = $(".attempt-quesa").length;
@@ -155,7 +156,7 @@
   }
   console.log("total_avg_time",total_avg_sec);
   
-  $(".avg_time_minutes").html(total_avg_min+":"+total_avg_sec1);
+  //$(".avg_time_minutes").html(total_avg_min+":"+total_avg_sec1);
   $(".attempt-quesa")
     .sort((a,b) => $(a).data("order") - $(b).data("order"))
     .appendTo(".class-box-se");
@@ -228,12 +229,13 @@
   $avg_time_sec1 = $avg_time%60;
 
   $sec1 = strlen($avg_time_sec1);
-        if($sec1 < 2){
+  if($sec1 < 2){
 
-            $avg_time_sec = "0".$avg_time_sec1;
-        }else{
-            $avg_time_sec = $avg_time_sec1;
-        }
+      $avg_time_sec = "0".$avg_time_sec1;
+  }else{
+      $avg_time_sec = $avg_time_sec1;
+  }
+
   ?>
   <h5><span class="avg_time_minutes"> <?php echo (int)$avg_time_min.":".$avg_time_sec; ?></span> <small>minutes</small></h5>
   <p>Avg. Time per Questions</p>
@@ -383,6 +385,7 @@
   $j = 1;
   $correct_answer = array();
   //print_r($session_array);
+  
 ?>
 
 @foreach($session_analysis as $qu)
@@ -410,7 +413,7 @@
   $avg_time = $time_avg_sum/count($get_percent);
   $avg_time1 = number_format((float)$avg_time, 2, '.', '');
 ?>
-<div class="attempt-quesa" data-order="{{ $qu->question_id }}">
+<div class="attempt-quesa" data-order="<?php echo array_search($qu->question_id, $q_id_array); ?>">
   <div class="rel-funct">
     
     <p class="atmpt"> @if($qu->attempted_status != NULL)
@@ -458,13 +461,13 @@
   
   if($l>0){
     $user_percent1 = $l/count($get_percent)*100;
-    $user_percent = number_format((float)$user_percent1, 2, '.', '');
+    $user_percent = round($user_percent1);
     ?>
-    <label class="label_two label_attempted-{{ $i }}">{{ $user_percent }}% Correct</label>
+    <label class="label_two label_attempted-{{ $i }}">{{ $user_percent }}% got it correct</label>
     <?php
   }else{
     ?>
-      <label class="label_two label_attempted-{{ $i }}">0% Correct</label>
+      <label class="label_two label_attempted-{{ $i }}">0% got it correct</label>
     <?php
   }
  ?>
@@ -525,10 +528,12 @@
   <?php
 
   $options = DB::table("question_bank")->where("course_id",$qu->course_id)->where("topic_id",$qu->topic_id)->where("chapter_id",$qu->chapter_id)->where("q_id",$qu->q_id)->get();
+
+  
   
 ?>
 <input type="hidden" name="question_id" value="{{ $qu->q_id }}">
-<div class="attempt-quesa" data-order="{{ $qu->q_id }}">
+<div class="attempt-quesa" data-order="<?php echo array_search($qu->q_id, $q_id_array); ?>">
   <div class="rel-funct">
     
     <p class="atmpt">Not Attempted</p>

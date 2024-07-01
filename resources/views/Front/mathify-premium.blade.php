@@ -1,12 +1,12 @@
 @extends('Front.layouts.landing_layout')
-@section('title', 'Home')
+@section('title', 'pricing')
 
 @section('current_page_js')
 
 @endsection
 
 @section('content')
-<section class="learnworlds-size-normal">
+<section class="learnworlds-size-normal" style="padding: 120px 0;">
   <div class="container">
   <div class="row">
      <div class="col-md-12 m-auto">
@@ -87,10 +87,14 @@ get online.</p>
 
   $price_default1 = $price1->unit_amount/100;
 
-  $product3 = $stripe->products->retrieve('prod_Q7MCjVkfGVMr4W', []);
+  $product3 = $stripe->products->retrieve('prod_QMK3MsBa5dQLNN', []);
+
+
 
   $price2 = $stripe->prices->retrieve($product3->default_price, []);
   $price_default2 = $price2->unit_amount/100;
+
+
 
   $user = Auth::guard("customer")->user();
 
@@ -152,7 +156,7 @@ get online.</p>
 <div class="col-md-4">
   <div class="prices-level @if($user) @if($active_plan == $product1->name && $plan_active) active @endif @endif">
   @if($price->recurring->interval_count == 1 && $price->recurring->interval == "month")  
-<h5>Monthly Suscription</h5>
+<h5>Monthly Subscription</h5>
 @endif
 <h1>${{ $price_default }}/Month</h1>
 <p>Billed monthly as ${{ $price_default }}</p>
@@ -176,7 +180,7 @@ get online.</p>
 
     @if($price1->recurring->interval_count == 6 && $price1->recurring->interval == "month")
     
-<h5>Bi-Annual Suscription</h5>
+<h5>Bi-Annual Subscription</h5>
 @endif
 <h1>${{ $price_default1 }}/Six Month</h1>
 <p>Billed every 6 months as ${{ $price_default1 }}</p>
@@ -192,15 +196,15 @@ get online.</p>
 
 <div class="col-md-4">
   <div class="prices-level @if($user) @if($active_plan == $product3->name && $plan_active) active @endif @endif">
-    @if($price2->recurring->interval_count == 1 && $price2->recurring->interval == "year")
-<h5>Yearly Suscription</h5>
+    @if($price2->recurring->interval_count == 3 && $price2->recurring->interval == "month")
+<h5>3 Month Special Offer</h5>
 @endif
-<h1>${{ $price_default2 }}/Year</h1>
-<p>Billed every 1 Year as ${{ $price_default2 }}</p>
+<h1>${{ $price_default2 }}</h1>
+<p>25% OFF Regular Price</p>
 @if($user)
-<a href="https://buy.stripe.com/6oE3e10JF9280QE7sx" class="@if($active_plan == $product3->name && $plan_active) subscribe_active @endif" onclick="suscribe_plan('{{ $user->id }}','{{ $user->name }}','{{ $user->email }}','{{ $price2->recurring->interval_count }}','{{ $price2->recurring->interval }}','{{ $price_default2 }}')">Purchase Now</a>
+<a href="https://buy.stripe.com/aEU01P63Zcek6aY8wC" class="@if($active_plan == $product3->name && $plan_active) subscribe_active @endif" onclick="suscribe_plan('{{ $user->id }}','{{ $user->name }}','{{ $user->email }}','{{ $price2->recurring->interval_count }}','{{ $price2->recurring->interval }}','{{ $price_default2 }}')" class="btn btn-danger" style="background: #d9534f;">Purchase Now</a>
 @else
-<a href="{{ url('/login') }}">Get started for free</a>
+<a href="{{ url('/login') }}" class="btn btn-danger" style="background: #d9534f;">Get started for free</a>
 @endif
 
 </div>  
@@ -241,6 +245,7 @@ We take the quality of our questions and solutions very seriously. We continuall
 
 
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript">
   function suscribe_plan(user_id,user_name,user_email,interval_count,interval,price_default){
     
@@ -250,13 +255,15 @@ We take the quality of our questions and solutions very seriously. We continuall
     sessionStorage.setItem("interval_count", interval_count);
     sessionStorage.setItem("interval", interval);
     sessionStorage.setItem("price_default", price_default);
-    // $.ajax({
-    //   url: "{{ url('/user/store_data') }}",
-    //   cache: false,
-    //   success: function(html){
-        
-    //   }
-    // });
+  //   $.ajax({
+  //   type: "GET",
+  //   url: "{{ url('user/store_data') }}",
+  //   data: {user_id:user_id,user_name:user_name,user_email:user_email,interval_count:interval_count,interval:interval,price_default:price_default,payment_status:"Pending"},
+  //   cache: false,
+  //   success: function(data){
+  //      //$("#resultarea").text(data);
+  //   }
+  // });
   }
   
 </script>

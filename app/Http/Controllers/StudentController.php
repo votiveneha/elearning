@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Input;
 
 use Illuminate\Http\Request;
 use App\Models\Students;
+use App\Models\Payments;
 use Session;
 use Hash;
 use DB;
@@ -22,8 +23,8 @@ class StudentController extends Controller
         $student_list = DB::table('users')
 
         ->select('*')
-        
-        ->whereNull('users.deleted_at') 
+        //->where('users.email_verification_status','1')
+        //->whereNull('users.deleted_at') 
 
         ->orderBy('id', 'desc')
 
@@ -74,10 +75,13 @@ class StudentController extends Controller
 
             $file = $request->file('profile_img');
             //echo $file->getClientOriginalName();
-            $destinationPath = '/uploads';
-            $imageName = time().'.'.$request->profile_img->extension(); 
-            $file->move(public_path('/uploads'),$imageName);
-            
+            if(!empty($file)){
+                $destinationPath = '/uploads';
+                $imageName = time().'.'.$request->profile_img->extension(); 
+                $file->move(public_path('/uploads'),$imageName);
+            }else{
+                $imageName = "";
+            }
 
             $student = new Students;
             $student->name = trim($request->name);
@@ -100,10 +104,31 @@ class StudentController extends Controller
                 ->where('id', $id)
                 ->update(['first_name' => trim($request->fname),
                     'course_id' => $request->course_id,
-                    'last_name'=>  trim($request->lname)
+                    'last_name'=>  trim($request->lname),
+                    'password'=>  Hash::make($request->password)
 
 
                 ]);
+
+                $payment_data = DB::table("payments")->where("customer_id",$request->id)->first();
+
+                if(empty($payment_data)){
+                    $payments = new Payments;
+                    $payments->customer_id = $id;
+                    $payments->customer_name = $request->name;
+                    $payments->customer_email = $request->email;
+                    $payments->amount = "";
+                    $payments->plan_name = $request->plan_name;
+                    $payments->payment_status = "Successful";
+                    $payments->save();
+                }else{
+                    DB::table('payments')
+                    ->where('customer_id', $id)
+                    ->update(['status' => '1','plan_name' => $request->plan_name,'payment_status'=>'Successful']);
+                }
+
+                
+
             Session::flash('message', 'Student Information Updated Sucessfully!');
             return redirect()->to('/admin/studentlist');
         }
@@ -114,10 +139,11 @@ class StudentController extends Controller
     public function student_delete($id){
 
         $id = base64_decode($id);
-        $students = Students::find($id);
-        $students->delete();
-        $student = Students::find($id);
-        if (!$student) {
+        // $students = Students::find($id);
+        // $students->delete();
+        // $student = Students::find($id);
+        $student = DB::table("users")->where("id",$id)->delete();
+        if ($student) {
             Session::flash('message', 'Student Information Deleted Successfully!');
         } else {
             Session::flash('error', 'Student not found or could not be deleted!');
@@ -174,6 +200,16 @@ class StudentController extends Controller
             return response()->json(['success' => false, 'message' => 'Failed to update status']);
         }    }
 
+    public function student_history(Request $request){
+        $student_id = base64_decode($request->student_id);
+        $data['student_id'] = $student_id;
+        $data['session_history'] = DB::table("question_analysis")->where("student_id",$student_id)->groupBy('reference_id')->orderBy('created_at', 'DESC')->get();
+        
+
+        $data['student_data'] = DB::table("users")->where("id",$student_id)->first();
+        
+        return view("admin.students.student_history_list")->with($data);
+    }    
 
 
 }

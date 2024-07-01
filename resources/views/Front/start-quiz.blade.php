@@ -29,8 +29,17 @@ keyboard_backspace
  <div class="text-quize">
 <h5>{{ $course_title->title }}</h5>
 <p>{{ $topic_name }}</p>
-<p>Total marks <b>{{ $marks }} Marks</b></p>
-<p class="alrm-ct">@if($subtopic_data->timer != "Not Timed")<b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i> {{ $total_time }} mins <i class='bx bxs-circle' style="font-size: 8px;"></i></b>@else <b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i>Not Timed</b> @endif Total Question: <strong>{{ $question_count }}</strong> </p>
+<p>Total marks: <b>{{ $marks }} Marks</b></p>
+<p class="alrm-ct">
+	@if($subtopic_data->timer != "Not Timed")
+	@if($subtopic_data->timer != "")
+		<b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i> {{ $total_time }} mins <i class='bx bxs-circle' style="font-size: 8px;"></i></b>
+	@else	
+		<b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i>Not Timed</b> 
+	@endif
+	
+	@else <b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i>Not Timed</b> 
+	@endif Total Questions: <strong>{{ $question_count }}</strong> </p>
 
 </div>
 <a href="{{ url('/user/quiz') }}/{{ $course_id }}/{{ $topic_id }}/{{ $st_id }}" class="start-quz">Start Quiz </a>

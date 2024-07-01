@@ -8,7 +8,7 @@
   <title>mathify</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta name="google-site-verification" content="kQjGiWUcL71jKLnKLNR3Vv1u9h929jJqR-QEj1h6uG4" />
   <!-- Favicons -->
   <link href="{{ url('/public') }}/assets/img/favicon.png" rel="icon">
   <link href="{{ url('/public') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -22,7 +22,7 @@
   <link href="{{ url('/public') }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{{ url('/public') }}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="{{ url('/public') }}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
- 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- Template Main CSS File -->
@@ -65,8 +65,9 @@
 
 <?php
   
-  if($_SERVER['REQUEST_URI'] != "/login" and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
+  if(!strpos($_SERVER['REQUEST_URI'],'login') and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz') and $_SERVER['REQUEST_URI'] != "/email_confirmation"){
     ?>
+    
     @include('Front.layouts.header')
     <?php if($_SERVER['REQUEST_URI'] != "/user/user_status" and $_SERVER['REQUEST_URI'] != "/user/settings" and $_SERVER['REQUEST_URI'] != "/user/change_password"){ ?>
       <?php if($_SERVER['REQUEST_URI'] != "/user/dashboard"){ ?>
@@ -82,8 +83,9 @@
 ?>
 @yield('content')
 <?php
-  if($_SERVER['REQUEST_URI'] != "/login" and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz')){
+  if(!strpos($_SERVER['REQUEST_URI'],'login') and $_SERVER['REQUEST_URI'] != "/register" and !strpos($_SERVER['REQUEST_URI'],'start_quiz') and !strpos($_SERVER['REQUEST_URI'],'quiz') and $_SERVER['REQUEST_URI'] != "/email_confirmation"){
     ?>
+    
     @include('Front.layouts.sidebar')
     <?php if($_SERVER['REQUEST_URI'] != "/user/user_status"  and $_SERVER['REQUEST_URI'] != "/user/settings" and $_SERVER['REQUEST_URI'] != "/user/change_password"){ ?>
       <?php if($_SERVER['REQUEST_URI'] != "/user/session_history"){ ?>
@@ -95,15 +97,23 @@
   <?php
   }
 ?>
+
     <?php
   }
 ?>
 
 
 
-
+  <?php
+  if($_SERVER['REQUEST_URI'] != "/user/full-calender"){
+    ?>
   <!-- Vendor JS Files -->
   <script src="{{ url('/public') }}/assets/js/jquery.min.js"></script>
+  <?php }else{
+    ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <?php
+  } ?>
   <script src="{{ url('/public') }}/assets/js/jquery.validate.min.js"></script>
   <script src="{{ url('/public') }}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="{{ url('/public') }}/assets/vendor/aos/aos.js"></script>

@@ -14,16 +14,34 @@ use Auth;
 use Mail;
 use Illuminate\Support\Str;
 use Stripe;
+use Session;
 
 class HomeController extends Controller
 {
     public function index(){
+        if(isset($_REQUEST['token'])){
+
+            $user = DB::table("users")->where("email",$_REQUEST['email'])->first();
+            
+
+            if($user->email_verification_status != 1){
+                $result = DB::table('users')
+                    ->where('email', $_REQUEST['email'])
+                    ->update(['email_verification_token' => base64_decode($_REQUEST['token']),'email_verification_status' => 1]);
+                    
+                    session::flash('success', 'Email has been verified successfully. Please login'); 
+                }else{
+                    return "Link Expired";
+                }
+
+            
+        }
     	return view("Front.login");
     }
 
     public function home(){
         $data['courses_data'] = DB::table("courses")->where("status",1)->where("deleted_at",NULL)->orderBy('ordering_id', 'ASC')->get();
-        return view("Front.home")->with($data);
+        return view("Front.home_new")->with($data);
     }
 
     public function error_page(){
@@ -68,7 +86,13 @@ class HomeController extends Controller
 
     public function pricing_page(){
         $data['courses_data'] = DB::table("courses")->where("status",1)->where("deleted_at",NULL)->orderBy('ordering_id', 'ASC')->get();
-        return view("Front.mathify-premium")->with($data);
+        $user = Auth::guard("customer")->user();
+        if($user){
+            return view("Front.mathify-premium-user")->with($data);
+        }else{
+            return view("Front.mathify-premium")->with($data);
+        }
+        
     }
 
     public function register(){
@@ -114,26 +138,33 @@ class HomeController extends Controller
                   'email'  => $request->get('email'),
                   'password' => $request->get('password')
                 );
+                $token = mt_rand(100000,999999);
+                //return view("Front.registration_email",['name' => $name,'email'=>$email,'token'=>$token]);
  try {
-   Mail::send('Front.registration_email', ['name' => $name,'email'=>$email], function($message) use($request){
+   Mail::send('Front.registration_email', ['name' => $name,'email'=>$email,'token'=>$token], function($message) use($request){
                 $message->to($request->email);
-                $message->from('elearning_three@mathifyhsc.com.au','elearning');
+                $message->from('help@mathifyhsc.com.au','Mathify');
                 $message->subject('Register User');
             });
-    if(Auth::guard("customer")->attempt($user_data))
-                {
+   
+    
+                
                     
-                    return redirect()->route('user_dashboard');
+                    return redirect()->route('email_confirmation');
                     
-                }
+                
 } catch (\Exception $e) {
     if(Auth::guard("customer")->attempt($user_data))
                 {
                     
-                    return redirect()->route('user_dashboard');
+                    return redirect()->back()->with('error', 'Email error');
                     
                 }
 }
+            
+             
+
+//return redirect()->back()->with('success', 'Email has been sent for verication. Please check now.');
             
              
 
@@ -146,8 +177,45 @@ class HomeController extends Controller
                 return redirect()->back()->with('error', 'Server error');
             }
         }else{
-            return redirect()->back()->with('error', 'Email already exist');
+            
+            if($checkUserEmail->email_verification_token){
+                return redirect()->back()->with('error', 'Email already exist');
+            }else{
+                $user_update = DB::table('users')
+
+                ->where('id', $checkUserEmail->id)
+
+                ->update(['name' =>  $name,'password' =>  Hash::make($password)
+
+                            ]);
+                $token = mt_rand(100000,999999);
+                //return view("Front.registration_email",['name' => $name,'email'=>$email,'token'=>$token]);
+                try {
+   Mail::send('Front.registration_email', ['name' => $name,'email'=>$email,'token'=>$token], function($message) use($request){
+                $message->to($request->email);
+                $message->from('help@mathifyhsc.com.au','Mathify');
+                $message->subject('Register User');
+            });
+   
+    
+               
+                    
+                    return redirect()->route('email_confirmation');
+                    
+                
+} catch (\Exception $e) {
+    return redirect()->back()->with('error', 'Email error');
+}
+            
+             
+
+return redirect()->back()->with('success', 'Email has been sent for verification. Please check now.');
+            }
         }
+    }
+
+    public function email_confirmation(Request $request){
+        return view("Front.email_confirmation");
     }
 
     public function submit_registration1(Request $request){
@@ -175,7 +243,18 @@ class HomeController extends Controller
         //echo Auth::guard("customer")->attempt($user_data);die;
         if(Auth::guard("customer")->attempt($user_data) and $user->status == 1 and $user->deleted_at == NULL and !empty($user_data))
         {
-            return redirect()->route('user_dashboard');
+            if($user->email_verification_status != NULL){
+                return redirect()->route('user_dashboard');
+            }else{
+                $date1 = date("Y-m-d");
+                $date = $user->created_at;
+                $date2 = date("Y-m-d", strtotime($date));
+                if($date2<$date1){
+                    return redirect()->route('user_dashboard');
+                }else{
+                    return redirect()->back()->with('error', 'Email or Password is incorrect');
+                }
+            }
             
             
             

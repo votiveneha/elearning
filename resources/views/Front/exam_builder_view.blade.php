@@ -40,17 +40,26 @@
 
    <div class="tick-box">
     @foreach($topic_data as $t_data)
+    @if($t_data->status == 1 && $t_data->deleted_at == NULL)
     <?php
-      $topic_questions = DB::table("question_bank")->where("topic_id",$t_data->topic_id)->where("quiz_exam","<>","Quiz")->groupBy("q_id")->get();
+      $topic_questions = DB::table("question_bank")->where("topic_id",$t_data->topic_id)->groupBy("q_id")->get();
+      $i = 0;
+      foreach($topic_questions as $t_qu){
+        if($t_qu->quiz_exam == "Exam Builder" || $t_qu->quiz_exam == "Both"){
+                        $i++;
+                    }
+      }
+
     ?>
    <div class="tick-radio">
     <div>
     <input type="checkbox" id="course_topics" name="course_topics" value="{{ $t_data->topic_id }}">
     <label for="vehicle1">{{ $t_data->title }}</label>
   </div>
-  <small> {{ count($topic_questions) }} Questions</small>
+  <small> {{ $i }} Questions</small>
 
    </div>
+   @endif
    @endforeach
 
       

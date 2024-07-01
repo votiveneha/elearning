@@ -40,6 +40,17 @@
 }
           @endif
 
+@media (min-width: 320px) and (max-width: 767px) {
+.navbar-mobile ul.log-out-pro {
+        position: inherit !important;
+        top: -8px;
+        left: 0;
+    }
+    #header {
+   
+    padding: 9px 0;
+}
+ }
  </style>
  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -47,7 +58,7 @@
 
      <!--  <h1 class="logo"><a href="index.html">Multi</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-       <a href="{{ url('/') }}" class="logo"><img src="{{ url('/public') }}/assets1/img/logo.png" alt="" class="img-fluid"></a>
+       <a href="{{ url('/') }}" class="logo"><img src="{{ url('/public') }}/assets1/img/final_logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -85,7 +96,7 @@
           ?>
           @if($email_data)
           <li>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 log-out-pro">
      <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
      <div class="mr-1z"> <label>
@@ -111,11 +122,11 @@
      ?>
    <p>@if($user){{ $user->name }} <br><small>{{ $user->email }}@endif</small></p> 
     </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ url('/user/settings') }}">Profile</a></li>
 
             <li><a class="dropdown-item" href="{{ url('/user/change_password') }}">Change Password</a></li>
-            <li><a class="dropdown-item" href="{{ url('/user/pricing') }}">Purchase Plan</a></li>
+            <li><a class="dropdown-item" href="{{ url('/user/pricing') }}">Upgrade Plan</a></li>
             <li><a class="dropdown-item" href="{{ url('/user/logout') }}">Logout</a></li>
            
           </ul>

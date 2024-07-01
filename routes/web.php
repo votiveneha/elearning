@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\TheoryController;
 use App\Http\Controllers\StripePaymentController;
+use App\Http\Controllers\EventController;
 
 
 
@@ -73,6 +74,8 @@ Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name("st
 Route::get('/mathify_works', [HomeController::class, 'mathify_works'])->name("mathify_works");
 Route::get('/pricing', [HomeController::class, 'pricing_page'])->name("pricing");
 Route::get('/error_page', [HomeController::class, 'error_page'])->name("error_page");
+Route::get('/email_confirmation', [HomeController::class, 'email_confirmation'])->name("email_confirmation");
+Route::get('/resend_confirmation', [HomeController::class, 'resend_confirmation'])->name("resend_confirmation");
 Route::group(['prefix' => 'user', 'middleware' => 'user_auth:customer'], function () {
 	Route::get('/courses_list', [HomeController::class, 'user_dashboard'])->name("courses_list");
 	Route::get('/course_view/{id}', [UserController::class, 'course_view1'])->name("course_view");
@@ -101,6 +104,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'user_auth:customer'], functio
 	Route::get('/thankyou', [UserController::class, 'thankyou'])->name("thankyou");
 	Route::post('/cancel_subscription', [UserController::class, 'cancel_subscription'])->name("cancel_subscription");
 	Route::get('/store_data', [UserController::class, 'store_data'])->name("store_data");
+	Route::get('full-calender', [EventController::class, 'index']);
 	Route::get('/logout', [HomeController::class, 'user_logout'])->name("user_logout");
 });
 
@@ -108,7 +112,9 @@ Route::get('/admin/add_questions', [AdminquesController1::class, 'index'])->name
 Route::post('/admin/post_questions', [AdminquesController1::class, 'post_questions'])->name('post_questions');
 
 Route::get('/admin/add_questions_bank/{chapter_id?}', [AdminquesController1::class, 'add_questions_bank'])->name('add_questions_bank');
+Route::get('/admin/add_questions_bank1/{chapter_id?}', [AdminquesController1::class, 'add_questions_bank1'])->name('add_questions_bank1');
 Route::post('/admin/post_questions_bank', [AdminquesController1::class, 'post_questions_bank'])->name('post_questions_bank');
+Route::post('/admin/post_questions_bank1', [AdminquesController1::class, 'post_questions_bank1'])->name('post_questions_bank1');
 Route::post('question/img', [AdminquesController1::class, 'uploadMedia'])->name('admin.question.uploadMedia');
 Route::post('/admin/fetch-subtopics', [AdminquesController1::class, 'fetch_subtopics'])->name('fetch-subtopics');
 Route::get('/admin/show_questions/{chapter_id}', [AdminquesController1::class, 'show_questions'])->name('show_questions');
@@ -123,6 +129,7 @@ Route::post('/admin/change_password', [AdminController::class, 'updatepassword']
 // Student Management 
 Route::get('/admin/studentlist', [StudentController::class, 'student_list'])->name("student.list");
 Route::get('/admin/student-view/{id}', [StudentController::class, 'student_view'])->name("student.view");
+Route::get('/admin/student_history/{student_id}', [StudentController::class, 'student_history'])->name("student_history");
 Route::get('/admin/student-form/{id}', [StudentController::class, 'student_form'])->name("student.edit");
 Route::get('/admin/student-form', [StudentController::class, 'student_form'])->name("student.edit");
 Route::post('/admin/student_action', [StudentController::class, 'student_action'])->name("student.action");
@@ -185,7 +192,8 @@ Route::get('/admin/theory-form/{id}', [TheoryController::class, 'theory_form'])-
 Route::get('/admin/theory-delete/{id}', [TheoryController::class, 'theory_delete'])->name("theory.delete");
 Route::post('/admin/theory_status', [TheoryController::class, 'theory_status'])->name("theory.status");
 Route::get('/user/course_view/{id}', [UserController::class, 'course_view'])->name("course_view_dashboard");
-
+Route::get('/admin/edit_email_management', [AdminController::class, 'email_management'])->name("email_management");
+Route::post('/admin/email_management_action', [AdminController::class, 'email_management_action'])->name("email_management_action");
 Route::post('/user/profile_action', [UserController::class, 'profile_action'])->name("profile_action");
 
 Route::get('/user/change_password', [UserController::class, 'showPasswordForm'])->name("user.showPasswordForm");

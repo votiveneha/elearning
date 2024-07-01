@@ -133,7 +133,7 @@ Subscribed to <span class="monthly_plan"></span></h4>
 	$.ajax({
 	  type: "GET",
 	  url: "{{ url('user/store_data') }}",
-	  data: {user_id:user_id,user_name:user_name,user_email:user_email,interval_count:interval_count,interval:interval,price_default:price_default},
+	  data: {user_id:user_id,user_name:user_name,user_email:user_email,interval_count:interval_count,interval:interval,price_default:price_default,payment_status:"Successful"},
 	  cache: false,
 	  success: function(data){
 	     //$("#resultarea").text(data);

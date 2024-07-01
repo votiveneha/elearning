@@ -1,6 +1,86 @@
 @extends('Front.layouts.layout')
 @section('title', 'Quiz')
 
+@section("current_page_css")
+<style type="text/css">
+  .BlockUIConfirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+}
+
+.blockui-mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.4;
+}
+
+.RowDialogBody {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  opacity: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.RowDialogBody > div:not(.confirm-body) {
+  padding: 8px 10px;
+}
+
+.confirm-header {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+.row-dialog-hdr-success {
+  border-top: 4px solid #2571d6;
+  border-bottom: 1px solid transparent;
+}
+
+.row-dialog-hdr-info {
+  border-top: 4px solid #5bc0de;
+  border-bottom: 1px solid transparent;
+}
+
+.confirm-body {
+  border-top: 1px solid #ccc;
+  padding:20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.confirm-btn-panel {
+  width: 100%;
+}
+.row-dialog-btn {
+  cursor: pointer;
+}
+
+.btn-naked {
+  background-color: transparent;
+}
+
+.quiz_accept_btn{
+  background-color: #2571d6;
+  border-color: #2571d6;
+}
+
+</style>
+@endsection
+
 @section("current_page_js")
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
 <script type="text/javascript">
@@ -33,7 +113,7 @@
     //alert(i);
     var total_div = $('.qustion-box-one').length;
     if(i == total_div){
-      $(".next-btn").removeAttr("onclick");
+      //$(".next-btn").removeAttr("onclick");
     }else{
       var next_box = i+1;
       $(".qustion-box-one").hide();
@@ -71,11 +151,12 @@
     var total_questions = $(".pallate").length;
     var total_time = $(".timer").val();
     var ans_time = $(".ans_time-"+i).val();
+    var question_ordering_id = $(".question_ordering_id-"+i).val();
     //alert(ans_time);
     $.ajax({
       type: "post",
       url: "{{ url('/user/submit_question_answer') }}",
-      data: {"q_id":q_id,"answer_val1":answer_val1,"reference_id":'{{ $reference_id }}',"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":total_time,"ans_time":ans_time,"quiz_type":"exam_builder","_token":"{{ csrf_token() }}"},
+      data: {"q_id":q_id,"answer_val1":answer_val1,"reference_id":'{{ $reference_id }}',"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":total_time,"ans_time":ans_time,"question_ordering_id":question_ordering_id,"quiz_type":"exam_builder","_token":"{{ csrf_token() }}"},
       cache: false,
       success: function(data){
          
@@ -95,10 +176,7 @@
     }, 1000);
     console.log("total_div",total_div);
     console.log("(i+1)",(i+1));
-    if(total_div == (i+1)){
-      $(".next-btn-"+(i+1)).removeAttr("onclick");
-      //$(".submit-btn").attr("onclick","submit_quiz1()");
-    }
+    
 
     window.history.replaceState(null, null, "?question="+(i+1));
   }
@@ -176,10 +254,11 @@
     var topic_id = "";
     var subtopic_id = "";
     var ans_time = $(".ans_time-"+total_div).val();
+    var question_ordering_id = $(".question_ordering_id-"+total_div).val();
     $.ajax({
       type: "post",
       url: "{{ url('/user/submit_quiz') }}",
-      data: {"q_id":q_id,"answer_val1":answer_val1,"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":time_spent,"ans_time":ans_time,"quiz_type":"exam_builder","_token":"{{ csrf_token() }}"},
+      data: {"q_id":q_id,"answer_val1":answer_val1,"attempted_questions":active_div,"total_questions":total_questions,"course_id":course_id,"topic_id":topic_id,"subtopic_id":subtopic_id,"total_time":time_spent,"ans_time":ans_time,"question_ordering_id":question_ordering_id,"quiz_type":"exam_builder","_token":"{{ csrf_token() }}"},
       cache: false,
       success: function(data){
          window.location.href = "{{ url('/user/session_analysis') }}/{{ base64_encode($reference_id) }}";
@@ -288,6 +367,10 @@
     // Return null if not found
     return null;
   }
+  function ConfirmForm() {
+  //clearInterval(not_timed);
+  $("#BlockUIConfirm").show();
+}
 </script>
 @endsection
 
@@ -317,6 +400,7 @@
       <div class="title mb-3 mt-2">
         <input type="hidden" name="question_id" class="question_id-{{ $i }}" value="{{ $qu->q_id }}">
         <input type="hidden" name="ans_time" class="ans_time-{{ $i }}" value="">
+        <input type="hidden" name="question_ordering_id" class="question_ordering_id-{{ $i }}" value="{{ $qu->ordering_id }}">
         <div class="question_marks_title">
         <h6 class="tp-q">Question {{ $i }}</h6>
           @if($qu->marks <= 1)
@@ -372,7 +456,11 @@
 </div> -->   
 <div class="nex-pre-btn">
 <a style="cursor: pointer;" class="pre-btn pre-btn-{{ $i }}" onclick="prev_btn({{ $i }})"> Previous</a>
-<a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="next_btn({{$i }},{{ $qu->q_id }})"> Next</a>
+@if($loop->count == $i)
+  <a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="ConfirmForm();"> Submit</a>
+@else  
+  <a style="cursor: pointer;" class="next-btn next-btn-{{ $i }}" onclick="next_btn({{$i }},{{ $qu->q_id }})"> Next</a>
+@endif
 </div>
 
 
@@ -488,7 +576,7 @@
                <a href="#" class="not-atempt">10</a> -->
                
 </div>
-<center><a href="#" class="submit-btn" onclick="submit_quiz1()"> Submit</a></center>
+<center><a href="#" class="submit-btn" onclick="ConfirmForm();"> Submit</a></center>
 <div class="quite_btn"><center><a href="{{ url('user/dashboard') }}" class="qt-btn"> Quit Exam</a></center></div>
          </div>
 </div>
@@ -503,5 +591,22 @@
 <br><br>
 
 </div>
+<div id="BlockUIConfirm" class="BlockUIConfirm" style="display: none;">
+  <div class="blockui-mask"></div>
+    <div class="RowDialogBody">
+      <div class="confirm-header row-dialog-hdr-success">
+        Submit Quiz
+      </div>
+      <div class="confirm-body">
+        Do you want to submit the test?
+      </div>
+      <div class="confirm-btn-panel pull-right">
+        <div class="btn-holder pull-right">
+          <input type="submit" class="row-dialog-btn btn btn-success quiz_accept_btn" value="Yes" onclick="submit_quiz1()" />
+          <input type="button" class="row-dialog-btn btn btn-naked" value="No" onclick="$('#BlockUIConfirm').hide();" />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 @endsection

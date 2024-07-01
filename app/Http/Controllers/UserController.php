@@ -18,6 +18,7 @@ use App\Models\Exambuilder;
 use App\Models\Savetime;
 use App\Models\Readtheory;
 use App\Models\Payments;
+use App\Models\Exambuilderquestions;
 use Hash;
 use Session;
 use DB;
@@ -54,7 +55,8 @@ class UserController extends Controller
     public function course_view1(Request $request){
         $id = base64_decode($request->id);
         $data['id'] = $id;
-        $data['topics'] = DB::table("topics")->where("course_id",$id)->where("course_id",$id)->orderBy('ordering_id','asc')->get();
+        $data['topics'] = DB::table("topics")->where("course_id",$id)->orderBy('ordering_id','asc')->get();
+        
         $data['course_title'] = DB::table("courses")->where("course_id",$id)->first();
         $data['user_data'] = DB::table("theory_read")->where("user_id",Auth::guard("customer")->user()->id)->first();
         $data['course_data'] = DB::table("courses")->where("course_id",$id)->orderBy('ordering_id', 'ASC')->get();
@@ -75,17 +77,17 @@ class UserController extends Controller
 
 
 
-        try {
-   Mail::send('Front.subscription_email', ['name' => 'neha','email'=>'votivephp.neha@gmail.com','plan_name'=>'monthly plan'], function($message) use($request){
-                $message->to('votivephp.neha@gmail.com');
-                $message->from('elearning_three@mathifyhsc.com.au','elearning');
-                $message->subject('Cancel Subscription');
-            });
-   return $update_payment_status;
+//         try {
+//    Mail::send('Front.subscription_email', ['name' => 'neha','email'=>'votivephp.neha@gmail.com','plan_name'=>'monthly plan'], function($message) use($request){
+//                 $message->to('votivephp.neha@gmail.com');
+//                 $message->from('elearning_three@mathifyhsc.com.au','elearning');
+//                 $message->subject('Cancel Subscription');
+//             });
+//    return $update_payment_status;
    
-} catch (\Exception $e) {
-    return $update_payment_status;
-}            
+// } catch (\Exception $e) {
+//     return $update_payment_status;
+// }            
 
         
 
@@ -184,6 +186,9 @@ class UserController extends Controller
         $data['reference_id'] = $request->reference_id;
         
         $exam_data = DB::table("exam_builder")->where("reference_id",$reference_id)->first();
+        $get_exam_data = $exam_data->topics_id;
+
+        $topic_ids = explode(",",$get_exam_data);
         
         if($exam_data->topics_id && $exam_data->question_type && $exam_data->difficulty_level && $exam_data->session_length){
 
@@ -195,26 +200,40 @@ class UserController extends Controller
         }
         $data['topic_titles'] = implode(",",$topic_titles);
         
+        $qu_ids23 = array();
         $qu_ids = array();
         $qu_data = array();
         if($exam_data->question_type == "Attempted"){
             $qu_data = DB::table("question_analysis")->where("student_id",Auth::guard("customer")->user()->id)->where("quiz_type","exam_builder")->where("attempted_status","!=",NULL)->groupBy('question_id')->get();
+            foreach ($qu_data as $q_d) {
+                $qu_ids[] = $q_d->question_id;
+            }
 
         }
         if($exam_data->question_type == "Not attempted"){
-            $qu_data = DB::table("question_analysis")->where("student_id",Auth::guard("customer")->user()->id)->where("quiz_type","exam_builder")->where("attempted_status","=",NULL)->groupBy('question_id')->get();
+            
+            $qu_data23 = DB::table("question_analysis")->where("student_id",Auth::guard("customer")->user()->id)->where("quiz_type","exam_builder")->where("attempted_status","!=",NULL)->whereIn("topic_id",$topic_ids)->groupBy('question_id')->get();
+            foreach ($qu_data23 as $q_d) {
+                $qu_ids23[] = $q_d->question_id;
+            }
+            
+                $qu_data = DB::table("question_bank")->whereIn("topic_id",$topic_ids)->whereNotIn("q_id",$qu_ids23)->groupBy('q_id')->get();
+
+                foreach ($qu_data as $q_d) {
+                    if($q_d->quiz_exam == "Exam Builder" || $q_d->quiz_exam == "Both"){
+                        $qu_ids[] = $q_d->q_id;
+                    }
+                }
+                
+
         }
-        foreach ($qu_data as $q_d) {
-            $qu_ids[] = $q_d->question_id;
-        }
+        
         
         $q_id_string = implode(",",$qu_ids);
         
         
         Session::put("reference_id", $reference_id);
-        $get_exam_data = $exam_data->topics_id;
-
-        $topic_ids = explode(",",$get_exam_data);
+        
 
         $question_array = array();
         
@@ -262,6 +281,8 @@ class UserController extends Controller
         $question_time = 0;
         $marks = 0;
         $qu_array = array();
+        // echo "<pre>";
+        // print_r($question_array);die;
         foreach ($question_array as $q_array) {
             //echo $q_array->time_length."<br>";
             $qu_array[] = $q_array; 
@@ -322,6 +343,16 @@ class UserController extends Controller
         $data['total_time'] = $total_time_m.":".$total_time_s;
         Session::put("timer", $data['total_time']);
         Session::put("qu_array", $qu_array);
+
+        $questions_id = array();
+        foreach ($qu_array as $q_array) {
+            $questions_id[] = $q_array->q_id;
+        }
+        $q_ids = implode(",",$questions_id);
+
+        $exam_builder_update = DB::table('exam_builder')
+                    ->where('reference_id', $reference_id)
+                    ->update(['q_ids' => $q_ids,'total_questions' => count($qu_array)]);
         
         $data['marks'] = $marks;
         $data['question_count'] = count($qu_array);
@@ -332,6 +363,9 @@ class UserController extends Controller
             $data['question_count'] = "0";
             $data['topic_titles'] = "";
         }
+        // echo "<pre>";
+        // print_r($qu_array);die;
+        
         
         // echo $question_count."<br>";
         // echo $question_time/60;
@@ -374,12 +408,20 @@ class UserController extends Controller
             $data['quiz'] = QuestionBank::where("course_id",$course_id)->where("topic_id",$topic_id)->where("chapter_id",$st_id)->orderBy('ordering_id', 'ASC')->groupBy('q_id')->get();
             $data['subtopic_data'] = DB::table("subtopics")->where("st_id",$st_id)->first();
             $data['attempt_count'] = DB::table("question_analysis")->where("reference_id",$data['reference_id'])->groupBy('question_id')->get();
+            $q_id_array = array();
+            foreach($data['quiz'] as $q_array){
+                $q_id_array[] = $q_array->q_id;
+                
+            }
+            Session::put("q_id_array",$q_id_array);
             // echo "<pre>";
             // print_r($data['quiz']);die;
         	return view("Front.quiz")->with($data);
         }else{
-            if(isset($_GET['reference_id'])){
-                $data['reference_id'] = base64_decode($_GET['reference_id']);
+            $ses_ref_id = Session::get("qu_array");
+
+            if(!$ses_ref_id){
+                $data['reference_id'] = base64_decode($request->reference_id);
                 Session::put("reference_id",$data['reference_id']);
             }else{
                 $data['reference_id'] = Session::get("reference_id");
@@ -402,10 +444,41 @@ class UserController extends Controller
                 $data['get_timer'] = "";
             }
             $qu_array = Session::get("qu_array");
+            if($qu_array){
+                $qu_array = Session::get("qu_array");
+                $q_id_array = array();
+                foreach($qu_array as $q_array){
+                    $q_id_array[] = $q_array->q_id;
+                    
+                }
+                
+            }else{
+                
+                $question_ids = $exam_data->q_ids;
+                $q_ids = explode(",",$question_ids); 
+                $qu_array = array();
+                foreach ($q_ids as $q_id) {
+                    $qu_array1 = QuestionBank::where("question_id",$q_id)->orderBy('ordering_id', 'ASC')->groupBy('q_id')->get();
+                    $qu_array[] = $qu_array1;
+                }
+                
+                $q_id_array = array();
+                foreach($qu_array as $q_array){
+                    $q_id_array[] = $q_array->q_id;
+                    
+                }
+
+                
+            }
+            // echo "<pre>";
+            //     print_r($qu_array);die;
             $data['reference_id'] = Session::get("reference_id");
             $data['quiz'] = $qu_array;
             $data['timer'] = Session::get("timer");
             $data['topic_name'] = "";
+            //print_r($qu_array);
+            
+            Session::put("q_id_array",$q_id_array);
             
             return view("Front.quiz_exam")->with($data);
         }
@@ -504,6 +577,7 @@ class UserController extends Controller
                 $new_session_analysis->reference_id = $reference_id;
                 $new_session_analysis->time_spent_seconds = $request->ans_time;
                 $new_session_analysis->quiz_type = $request->quiz_type;
+                $new_session_analysis->question_ordering_id = $request->question_ordering_id;
                 $new_session_analysis->save();
             }
 
@@ -548,6 +622,7 @@ class UserController extends Controller
         $topic_id = base64_decode($request->topic_id);
         $st_id = base64_decode($request->st_id);
         
+        $data['q_id_array'] = Session::get("q_id_array");
 
         if($course_id && $topic_id && $st_id){
 
@@ -564,7 +639,7 @@ class UserController extends Controller
                 }
                 
                 $data['questions'] = QuestionBank::where("course_id",$course_id)->where("topic_id",$topic_id)->where("chapter_id",$st_id)->groupBy('q_id')->get();
-                $data['session_analysis'] = NewSessionAnalysis::where("course_id",$course_id)->where("topic_id",$topic_id)->where("chapter_id",$st_id)->where("reference_id",$data['reference_id'])->where("student_id",Auth::guard("customer")->user()->id)->orderBy('question_ordering_id', 'ASC')->groupBy('question_id')->get();
+                $data['session_analysis'] = NewSessionAnalysis::where("course_id",$course_id)->where("topic_id",$topic_id)->where("chapter_id",$st_id)->where("reference_id",$data['reference_id'])->where("student_id",Auth::guard("customer")->user()->id)->groupBy('question_id')->get();
                 $session_array = array();
                 foreach ($data['session_analysis'] as $ses_an) {
                     $session_array[] = $ses_an->question_id;
@@ -572,17 +647,47 @@ class UserController extends Controller
                 $data['session_array'] = $session_array;
                 $data['session_analysis1'] = SessionAnalysis::where("course_id",$course_id)->where("topic_id",$topic_id)->where("subtopic_id",$st_id)->where("reference_id",$data['reference_id'])->where("student_id",Auth::guard("customer")->user()->id)->first();
             }else{
-
+                
+               
                 $data['timer_type'] = "";
                 $data['timer'] = Session::get("timer");
-                $data['questions'] = Session::get("qu_array");
-                $data['session_array'] = array();
-                $data['reference_id'] = Session::get("reference_id");
+                 
+                $questions_data = Session::get("qu_array");
+
+                if($request->reference_id){
+                    $data['reference_id'] = base64_decode($request->reference_id);
+                }else{
+                    $data['reference_id'] = Session::get("reference_id");
+                }
+
+                if($questions_data){
+                    $data['questions'] = $questions_data;
+                    $data['q_id_array'] = Session::get("q_id_array");
+                }else{
+                    $exam_data = DB::table("exam_builder")->where("reference_id",$data['reference_id'])->first();
+                    $data['qu_ids'] = explode(",",$exam_data->q_ids);
+                    $q_array = array();
+
+                    foreach ($data['qu_ids'] as $q_id) {
+                        $ques = QuestionBank::where("q_id",$q_id)->first();
+                        $q_array[] = $ques;
+                    }
+                    $data['questions'] = $q_array;
+                    $data['q_id_array'] = $data['qu_ids'];
+                }
+                
+                //$data['session_array'] = array();
+               
+
+               
+
                 $data['session_analysis'] = NewSessionAnalysis::where("reference_id",$data['reference_id'])->where("student_id",Auth::guard("customer")->user()->id)->orderBy('analysis_id', 'ASC')->groupBy('question_id')->get();
+
                 $session_array = array();
                 foreach ($data['session_analysis'] as $ses_an) {
                     $session_array[] = $ses_an->question_id;
                 }
+
                 $data['session_array'] = $session_array;
                 $data['session_analysis1'] = SessionAnalysis::where("reference_id",$data['reference_id'])->where("student_id",Auth::guard("customer")->user()->id)->first();
             }
@@ -639,8 +744,10 @@ class UserController extends Controller
 
     public function exam_builder_view(Request $request){
         $course_id = base64_decode($request->course_id);
-        $data['topic_data'] = DB::table("topics")->where("course_id",$course_id)->orderBy('ordering_id', 'ASC')->get();
+        $data['topic_data'] = DB::table("topics")->where("course_id",$course_id)->orderBy('ordering_id', 'asc')->get();
         $data['course_id'] = $course_id;
+        // echo "<pre>";
+        // print_r($data['topic_data']);die;
         return view("Front.exam_builder_view")->with($data);
     }
 
@@ -673,18 +780,26 @@ class UserController extends Controller
         $data['stripe'] = $stripe;
         //$payment_intents = $stripe->paymentIntents->all();
         $user_email = Auth::guard('customer')->user()->email;
-        //echo $user_email;
-        // foreach ($payment_intents as $p_intents) {
-        //     $customer_data = $stripe->customers->retrieve($p_intents->customer, []);
-        //     $user_email = Auth::guard('customer')->user()->email;
-        //     if($user_email == $customer_data->email){
-        //         //echo $customer_data->email;
-        //     }
-            
-        // }
 
-        // echo "<pre>";
-        // print_r($stripe->paymentIntents->all());die;
+        $student_id = Auth::guard('customer')->user()->id;
+
+        $total_time_spent = DB::select("select sum(time_spent_seconds) as time_spent_seconds from (select * from question_analysis where student_id = ".$student_id." group by question_id) as q_analysis");
+        $total_time = $total_time_spent[0]->time_spent_seconds;
+
+        $time_spent_hour = $total_time/3600;
+        $time_spent_min =$total_time%3600;
+
+        if($time_spent_min<3600){
+            $time_spent_min1 = $time_spent_min/60;
+        }else{
+            $time_spent_min1 = $time_spent_min;
+        }
+
+        $data['time_spent_hour'] = (int)$time_spent_hour." hrs:".(int)$time_spent_min1." min";
+        
+        
+        
+        
         return view("Front.user_status")->with($data);
     }
 
@@ -771,7 +886,7 @@ class UserController extends Controller
                     'profile_img'=> $imageName
                 ]);
             Session::flash('message', 'Profile Updated Sucessfully!');
-            return redirect()->to('/user/user_dashboard');
+            return redirect()->to('/user/dashboard');
 
     }
 
@@ -787,6 +902,12 @@ class UserController extends Controller
         $interval_count = $request->interval_count;
         $interval = $request->interval;
         $price_default = $request->price_default;
+
+        // if($request->payment_status == "Pending"){
+        //     $payment_status = $request->payment_status;
+        // }else{
+        //     $payment_status = $request->payment_status;
+        // }
 
         $payments = new Payments;
         $payments->customer_id = $user_id;

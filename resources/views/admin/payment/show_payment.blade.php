@@ -110,7 +110,7 @@
 
                     <th>Amount</th>
 
-                    
+                    <th>Payment Date</th>
                     <th>Plan Status</th>
                     
 
@@ -171,8 +171,12 @@
                       @endif
                     </td>
 
-                    <td>${{ $list->amount }}</td>
-
+                    <td>@if($list->amount)${{ $list->amount }}@endif</td>
+                    <td>
+                      <?php
+                        echo $new_date = date("d-m-Y",strtotime($list->created_at));
+                      ?>
+                    </td>
                     
 
                     <td>{{ $list->payment_status }}</td>

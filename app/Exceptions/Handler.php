@@ -56,6 +56,9 @@ class Handler extends ExceptionHandler
             }
             
         }
+        // if (config('app.debug')) {
+        //         return response()->view('Front.error_page', [], 500);
+        //     }
         return parent::render($request, $exception);
      }
 }

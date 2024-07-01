@@ -68,9 +68,9 @@
                  <p style="color: #256ad6; margin: 0;">Payment Details</p>
               <label>Subscription</label>
               <?php
-                $get_subscription = DB::table("payments")->where("customer_email",$user_data->email)->first();
-                $user_data = DB::table("users")->where("email",$user_data->email)->first();
-                
+                $get_subscription = DB::table("payments")->where("customer_id",$user_data->id)->first();
+                $user_data = DB::table("users")->where("id",$user_data->id)->first();
+                $plan_name = "None";
                 if(empty($get_subscription) || $get_subscription->payment_status == "Cancelled"){
                   $plan_name = "None";
                 }else{

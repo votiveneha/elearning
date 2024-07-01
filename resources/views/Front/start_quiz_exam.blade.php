@@ -18,8 +18,8 @@ keyboard_backspace
  <div class="text-quize">
 <h5>{{ $course_title->title }}</h5>
 <p>@if($topic_titles){{ $topic_titles }}@endif</p>
-<p>Total marks <b>{{ $marks }} Marks</b></p>
-<p class="alrm-ct"><b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i> {{ $total_time }} mins <i class='bx bxs-circle' style="font-size: 8px;"></i></b> Total Question: <strong>{{ $question_count }}</strong> </p>
+<p>Total marks: <b>{{ $marks }} Marks</b></p>
+<p class="alrm-ct"><b><i class='bx bx-alarm' style="font-size: 21px;position: relative;top: 2px;"></i> {{ $total_time }} mins <i class='bx bxs-circle' style="font-size: 8px;"></i></b> Total Questions: <strong>{{ $question_count }}</strong> </p>
 
 </div>
 <a href="@if($question_count<=0 && $total_time=='0:00') # @else {{ url('/user/quiz') }}/{{ $reference_id }}?question=1 @endif" class="start-quz">Start Quiz </a>

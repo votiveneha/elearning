@@ -189,7 +189,7 @@ class TopicController extends Controller
         ->leftJoin('topics','subtopics.topic_id', '=' , 'topics.topic_id')
         ->whereNull('subtopics.deleted_at') 
         ->where('subtopics.topic_id',base64_decode($request->topic_id)) 
-        ->orderBy('subtopics.ordering_id', 'ASC')
+        ->orderBy(DB::raw('subtopics.ordering_id IS NULL, subtopics.ordering_id'), 'ASC')
         ->get();
 
         $data_onview = array('topic_list' =>$topic_list,'topic_id'=> $request->topic_id,'course_id'=> $request->course_id);

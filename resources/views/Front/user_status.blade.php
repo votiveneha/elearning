@@ -35,7 +35,7 @@
   ?>
                 <div class="card bg-gradient-danger card-img-holder text-white">
                   <div class="card-body">
-                    <img src="https://mathifyhsc.com/dev/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
+                    <img src="https://mathifyhsc.com/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
                     <h4 class="font-weight-normal mb-3">Total Questions <i class='bx bx-book-content'></i>
                     </h4>
                     <h2 class="mb-0">{{ count($total_questions) }}</h2>
@@ -45,7 +45,7 @@
               <div class="col-md-3 info-stats stretch-card grid-margin">
                 <div class="card bg-gradient-info card-img-holder text-white">
                   <div class="card-body">
-                    <img src="https://mathifyhsc.com/dev/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
+                    <img src="https://mathifyhsc.com/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
                     <h4 class="font-weight-normal mb-3">Solved Questions <i class='bx bx-check-circle'></i>
                     </h4>
                     <h2 class="mb-0">{{ count($solved_questions) }}</h2>
@@ -55,14 +55,14 @@
               <div class="col-md-3 info-stats stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                   <div class="card-body">
-                    <img src="https://mathifyhsc.com/dev/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
+                    <img src="https://mathifyhsc.com/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
                     <h4 class="font-weight-normal mb-3">Unsolved Questions <i class='bx bx-window-close'></i>
                     </h4>
                     <h2 class="mb-0">{{ $unsolved_per }}</h2>
                   </div>
                 </div>
               </div>
-			  <!-- <div class="col-md-3 info-stats stretch-card grid-margin">
+			  <div class="col-md-3 info-stats stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                   <div class="card-body">
                     <img src="https://mathifyhsc.com/dev/public/assets/img/circle-bg.png" class="card-img-absolute" alt="circle-image">
@@ -85,14 +85,33 @@
                     ?>
                     <h4 class="font-weight-normal mb-3">Total Hours Spent <i class='bx bx-timer'></i>
                     </h4>
-                    <h2 class="mb-0">68 hrs</h2>
+                    <h2 class="mb-0">{{ $time_spent_hour }}</h2>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>	
  
 	   <div class="row stats_score">
 		<div class="col-md-12 mb-4">
+      <?php
+        $student_id = Auth::guard('customer')->user()->id;
+
+        // $total_question_solved = DB::select("select * from question_analysis where MONTH(created_at)= 4 and student_id = ".$student_id." group by question_id");
+        // echo count($total_question_solved);
+        //print_r($total_question_solved);
+        
+        $i = 1;
+        $total_question_array = array();
+        for($i=1;$i<=12;$i++){
+         $total_question_solved = DB::select("select * from question_analysis where MONTH(created_at)= ".$i." and student_id = ".$student_id." group by question_id");
+          $monthNum  = $i;
+          $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+          $monthName = $dateObj->format('F'); // March
+          $total_question_array[] = array("label"=>$monthName,"y"=>count($total_question_solved));
+        }
+        
+
+      ?>
 <script>
 window.onload = function () {
 
@@ -100,10 +119,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
   animationEnabled: true,
   theme: "light2",
   title:{
-    text: "Progress Score"
+    text: "No Of Solved Questions"
   },
   axisX:{
-    valueFormatString: "DD MMM",
+    valueFormatString: "MMM",
     crosshair: {
       enabled: true,
       snapToDataPoint: true
@@ -131,46 +150,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
     showInLegend: true,
     name: "",
     markerType: "square",
-    xValueFormatString: "DD MMM, YYYY",
+    xValueFormatString: "MMMM YYYY",
     color: "#F08080",
-    dataPoints: [
-      { x: new Date(2017, 0, 3), y: 650 },
-      { x: new Date(2017, 0, 4), y: 700 },
-      { x: new Date(2017, 0, 5), y: 710 },
-      { x: new Date(2017, 0, 6), y: 658 },
-      { x: new Date(2017, 0, 7), y: 734 },
-      { x: new Date(2017, 0, 8), y: 963 },
-      { x: new Date(2017, 0, 9), y: 847 },
-      { x: new Date(2017, 0, 10), y: 853 },
-      { x: new Date(2017, 0, 11), y: 869 },
-      { x: new Date(2017, 0, 12), y: 943 },
-      { x: new Date(2017, 0, 13), y: 970 },
-      { x: new Date(2017, 0, 14), y: 869 },
-      { x: new Date(2017, 0, 15), y: 890 },
-      { x: new Date(2017, 0, 16), y: 930 }
-    ]
-  },
-  {
-    type: "line",
-    showInLegend: true,
-    name: "",
-    lineDashType: "dash",
-    dataPoints: [
-      { x: new Date(2017, 0, 3), y: 510 },
-      { x: new Date(2017, 0, 4), y: 560 },
-      { x: new Date(2017, 0, 5), y: 540 },
-      { x: new Date(2017, 0, 6), y: 558 },
-      { x: new Date(2017, 0, 7), y: 544 },
-      { x: new Date(2017, 0, 8), y: 693 },
-      { x: new Date(2017, 0, 9), y: 657 },
-      { x: new Date(2017, 0, 10), y: 663 },
-      { x: new Date(2017, 0, 11), y: 639 },
-      { x: new Date(2017, 0, 12), y: 673 },
-      { x: new Date(2017, 0, 13), y: 660 },
-      { x: new Date(2017, 0, 14), y: 562 },
-      { x: new Date(2017, 0, 15), y: 643 },
-      { x: new Date(2017, 0, 16), y: 570 }
-    ]
+    dataPoints: <?php echo json_encode($total_question_array, 
+                            JSON_NUMERIC_CHECK); ?>
   }]
 });
 chart.render();
@@ -297,7 +280,23 @@ function toogleDataSeries(e){
 
 <?php
   $i = 1;
+  $user_id = Auth::guard("customer")->user()->id;
+  $payment_data = DB::table("payments")->where("customer_id",$user_id)->get();
+  $user_data = DB::table("users")->where("email",$user_id)->first();
+  //echo $user_data->course_id;
+  if(count($payment_data)>0 && $payment_data[0]->payment_status == "Successful"){
+    if($payment_data[0]->plan_name != NULL){
+
+      $paid_courses = true;
+    }else{
+      
+      $paid_courses = false;
+    }
+  }else{
+    $paid_courses = false;
+  }
 ?>
+@if($paid_courses == false)
 @foreach($course_data as $c_data)
 
 @if($c_data->status == 1 && $c_data->deleted_at == NULL)
@@ -366,55 +365,29 @@ function toogleDataSeries(e){
 @endif
 
 @endforeach
+@endif
 <?php
-  $user_email = Auth::guard("customer")->user()->email;
-  $payment_data = DB::table("payments")->where("customer_email",$user_email)->get();
-  $user_data = DB::table("users")->where("email",$user_email)->first();
-  //echo $user_data->course_id;
+  $user_id = Auth::guard("customer")->user()->id;
+  $payment_data = DB::table("payments")->where("customer_id",$user_id)->get();
+  $user_data = DB::table("users")->where("id",$user_id)->first();
+  
+
   if(count($payment_data)>0 && $payment_data[0]->payment_status == "Successful"){
-    $paid_courses = true;
+    if($payment_data[0]->plan_name != NULL){
+
+      $paid_courses = true;
+    }else{
+      
+      $paid_courses = false;
+    }
+    
   }else{
     $paid_courses = false;
   }
 
 
   
-  $invoices = $stripe->invoices->all();
-  //echo "<pre>";
-  //print_r($invoices);
-  $in_array = array();
-  foreach ($invoices as $key => $in) {
-    if($in->customer_email == $user_email){
-      $payment_db_product = $stripe->invoices->retrieve($in->id, [])->lines['data'][0]->plan->product;
-
-               
-      $product = $stripe->products->retrieve($payment_db_product, []);
-      
-      array_push($in_array, array("email"=>$in->customer_email,"created"=>$in->created,"plan"=>$product->name,"plan_start"=>$in->lines['data'][0]->period->start,"plan_end"=>$in->lines['data'][0]->period->end));
-      //echo $in->customer_email;
-      
-    }
-  }
-  //print_r($in_array);
-  // foreach ($variable as $key => $value) {
-  //   # code...
-  // }
-
-
-  if($in_array){
-    $active_plan = $in_array[0]["plan"];
-    $plan_end = $in_array[0]["plan_end"]."<br>";
-    $current_date = date('m/d/Y h:i:s', time());
-    $date = strtotime($current_date); 
-
-    if($plan_end > $date){
-      $plan_active = true;
-    }else{
-      $plan_active = false;
-    }
-  }else{
-    $plan_active = false;
-  }
+  
 ?>
 @if($paid_courses)
 @foreach($course_data as $c_data)

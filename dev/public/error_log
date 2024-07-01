@@ -1,0 +1,840 @@
+[08-Jun-2024 09:23:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:37 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:37 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:45 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:45 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:56 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:23:56 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:24:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:24:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:24:59 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[08-Jun-2024 09:24:59 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:45:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:46:29 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:46:29 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:28 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:47:28 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:00 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:35 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:35 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:48:51 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:46 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:54 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:49:54 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:30 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:30 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:30 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:50:30 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:37 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:37 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:37 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:37 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:40 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:40 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 04:51:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:53:33 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:53:33 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:53:33 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:53:33 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:56:49 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:56:49 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:56:49 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:56:49 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:07 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:07 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:55 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:55 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:55 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:57:55 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:28 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:28 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:28 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:28 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:38 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:38 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:38 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:38 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:55 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:55 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:55 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 09:59:55 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:26 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:26 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:26 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:00:26 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:02:11 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:02:11 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:02:11 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:02:11 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:03:58 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:03:58 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:03:58 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:03:58 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:26 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:26 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:26 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:26 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:34 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:04:35 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:05:28 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:05:28 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:05:36 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[10-Jun-2024 10:05:36 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[11-Jun-2024 00:46:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:37:57 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 01:53:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 03:40:21 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 03:40:21 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:13:41 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:19 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[19-Jun-2024 08:14:53 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:11 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 00:04:48 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:40:25 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[20-Jun-2024 03:41:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:01 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 05:51:02 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:23 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:38:56 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:12 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:12 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:18 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:48:18 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:51:22 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:51:22 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:05 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:16 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:16 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:52:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:53:39 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:53:39 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:53:39 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:53:39 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:15 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:33 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:33 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:33 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:54:33 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:08 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:08 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:24 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:24 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:24 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:24 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:57 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:57 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:57 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:55:57 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:56:52 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 07:56:52 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:06:32 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:06:32 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:06:52 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:06:52 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:07:09 America/Chicago] PHP Warning:  require(/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/eicyjdte/public_html/dev/public/index.php on line 34
+[21-Jun-2024 08:07:09 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/eicyjdte/public_html/dev/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/eicyjdte/public_html/dev/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home2/eicyjdte/public_html/dev/public/index.php on line 34

@@ -2233,8 +2233,9 @@ text-align: center;
     align-items: center;
 }
 
-.monitore-screen img{
-  width: 100%;
+.monitore-screen img {
+    width: 100%;
+    margin-top: 24px;
 }
 
 .h-second h2 {

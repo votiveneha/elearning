@@ -80,10 +80,31 @@ class AdminController extends Controller
     }
 
     public function show_payment(){
-        $data['payments'] = DB::table("payments")->get();
+        $data['payments'] = DB::table("payments")->orderBy('payment_id', 'DESC')->get();
         //print_r($data['payments']);die;
         
         return view('admin.payment.show_payment')->with($data);
+    } 
+
+    public function email_management(){
+        $data['email_management'] = DB::table("email_management")->where('email_management_id', '1')->first();
+        //print_r($data['payments']);die;
+        
+        return view('admin.edit_email_management')->with($data);
+    } 
+
+    public function email_management_action(Request $request){
+        $update_email_management = DB::table('email_management')
+
+            ->where('email_management_id', "1")
+
+            ->update(['email_confirmation_page' =>  $request->email_confirmation_page,'email_confirmation_mail' =>  $request->email_confirmation_mail
+
+						]);
+        //print_r($data['payments']);die;
+        
+        Session::flash('success', 'Content Updated Successfully'); 
+        return redirect()->to('/admin/edit_email_management');
     } 
 
 
@@ -117,13 +138,14 @@ class AdminController extends Controller
 
 			$this->validate($request,["password" => "required_with:cpassword|same:cpassword"]);
 
-			DB::table('admins')
+			$update_password = DB::table('users')
 
             ->where('id', $admin_id)
 
             ->update(['password' =>  Hash::make($request->password)
 
 						]);
+            
             Session::flash('success_message', 'Password Update Sucessfully.'); 
 
 
@@ -269,5 +291,7 @@ class AdminController extends Controller
 			return redirect()->to('/admin/general_setting');	
 
 	}
+
+	
 
 }

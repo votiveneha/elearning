@@ -2,7 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-<section class="learnworlds-size-normal">
+<section class="learnworlds-size-normal" style="padding: 120px 0;">
   <div class="container-fluid">
   <div class="row">
      <div class="col-md-9 m-auto">
